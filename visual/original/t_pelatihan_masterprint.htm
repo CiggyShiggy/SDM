@@ -1,0 +1,57 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel t_pelatihan masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$entry_date_class}">{$label t_pelatihan entry_date}</th>
+			<th class="{$id_pegawai_class}">{$label t_pelatihan id_pegawai}</th>
+			<th class="{$nama_pegawai_class}">{$label t_pelatihan nama_pegawai}</th>
+			<th class="{$tgl_mulai_class}">{$label t_pelatihan tgl_mulai}</th>
+			<th class="{$tgl_selesai_class}">{$label t_pelatihan tgl_selesai}</th>
+			<th class="{$judul_class}">{$label t_pelatihan judul}</th>
+			<th class="{$tempat_class}">{$label t_pelatihan tempat}</th>
+			<th class="{$penyelenggara_class}">{$label t_pelatihan penyelenggara}</th>
+			<th class="{$file_sertifikat_class}">{$label t_pelatihan file_sertifikat}</th>
+			<th class="{$file_materi_class}">{$label t_pelatihan file_materi}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$entry_date_class}">{$entry_date_mastervalue}</td>
+			<td class="{$id_pegawai_class}">{$id_pegawai_mastervalue}</td>
+			<td class="{$nama_pegawai_class}">{$nama_pegawai_mastervalue}</td>
+			<td class="{$tgl_mulai_class}">{$tgl_mulai_mastervalue}</td>
+			<td class="{$tgl_selesai_class}">{$tgl_selesai_mastervalue}</td>
+			<td class="{$judul_class}">{$judul_mastervalue}</td>
+			<td class="{$tempat_class}">{$tempat_mastervalue}</td>
+			<td class="{$penyelenggara_class}">{$penyelenggara_mastervalue}</td>
+			<td class="{$file_sertifikat_class}">{$file_sertifikat_mastervalue}</td>
+			<td class="{$file_materi_class}">{$file_materi_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

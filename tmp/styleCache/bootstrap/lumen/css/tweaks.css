@@ -1,0 +1,27 @@
+/* icon underlines */
+
+.glyphicon.glyphicon:not(:hover) {
+	text-decoration: none;
+}
+
+.rnr-horizontal-lookup {
+	margin-top:8px;
+	min-height:30px;
+}
+
+select.form-control[size="1"] {
+ height: 38px; 
+}
+
+.chosen-container-multi .chosen-choices.chosen-choices {
+ min-height: 38px !important; 
+ border: 1px solid #e7e7e7;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+    -webkit-box-shadow: inset 0 2px 0 rgba(0,0,0,0.075);
+    box-shadow: inset 0 2px 0 rgba(0,0,0,0.075)
+	
+}
+
+

@@ -1,0 +1,51 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel t_pekerjaan masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$entry_date_class}">{$label t_pekerjaan entry_date}</th>
+			<th class="{$id_pegawai_class}">{$label t_pekerjaan id_pegawai}</th>
+			<th class="{$nama_pegawai_class}">{$label t_pekerjaan nama_pegawai}</th>
+			<th class="{$nm_unit_class}">{$label t_pekerjaan nm_unit}</th>
+			<th class="{$tahun_class}">{$label t_pekerjaan tahun}</th>
+			<th class="{$no_sk_class}">{$label t_pekerjaan no_sk}</th>
+			<th class="{$file_sk_class}">{$label t_pekerjaan file_sk}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$entry_date_class}">{$entry_date_mastervalue}</td>
+			<td class="{$id_pegawai_class}">{$id_pegawai_mastervalue}</td>
+			<td class="{$nama_pegawai_class}">{$nama_pegawai_mastervalue}</td>
+			<td class="{$nm_unit_class}">{$nm_unit_mastervalue}</td>
+			<td class="{$tahun_class}">{$tahun_mastervalue}</td>
+			<td class="{$no_sk_class}">{$no_sk_mastervalue}</td>
+			<td class="{$file_sk_class}">{$file_sk_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

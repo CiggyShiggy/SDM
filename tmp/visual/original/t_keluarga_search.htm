@@ -1,0 +1,329 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel t_keluarga search}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN entry_date_fieldblock}		
+	<div class="container {$fielddispclass_entry_date}" data-fieldname="entry_date">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_entry_date}">
+				{$label t_keluarga entry_date}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_entry_date}
+			</div>
+			<div class="col-md-4" >
+				{$entry_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$entry_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END entry_date_fieldblock}
+	{BEGIN ktp_fieldblock}		
+	<div class="container {$fielddispclass_ktp}" data-fieldname="ktp">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_ktp}">
+				{$label t_keluarga ktp}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_ktp}
+			</div>
+			<div class="col-md-4" >
+				{$ktp_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ktp_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ktp_fieldblock}
+	{BEGIN kk_fieldblock}		
+	<div class="container {$fielddispclass_kk}" data-fieldname="kk">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_kk}">
+				{$label t_keluarga kk}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_kk}
+			</div>
+			<div class="col-md-4" >
+				{$kk_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$kk_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END kk_fieldblock}
+	{BEGIN akta_fieldblock}		
+	<div class="container {$fielddispclass_akta}" data-fieldname="akta">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_akta}">
+				{$label t_keluarga akta}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_akta}
+			</div>
+			<div class="col-md-4" >
+				{$akta_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$akta_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END akta_fieldblock}
+	{BEGIN id_pegawai_fieldblock}		
+	<div class="container {$fielddispclass_id_pegawai}" data-fieldname="id_pegawai">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_id_pegawai}">
+				{$label t_keluarga id_pegawai}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_id_pegawai}
+			</div>
+			<div class="col-md-4" >
+				{$id_pegawai_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$id_pegawai_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END id_pegawai_fieldblock}
+	{BEGIN nama_pegawai_fieldblock}		
+	<div class="container {$fielddispclass_nama_pegawai}" data-fieldname="nama_pegawai">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_nama_pegawai}">
+				{$label t_keluarga nama_pegawai}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_nama_pegawai}
+			</div>
+			<div class="col-md-4" >
+				{$nama_pegawai_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$nama_pegawai_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END nama_pegawai_fieldblock}
+	{BEGIN hub_kel_fieldblock}		
+	<div class="container {$fielddispclass_hub_kel}" data-fieldname="hub_kel">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_hub_kel}">
+				{$label t_keluarga hub_kel}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_hub_kel}
+			</div>
+			<div class="col-md-4" >
+				{$hub_kel_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$hub_kel_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END hub_kel_fieldblock}
+	{BEGIN nama_kel_fieldblock}		
+	<div class="container {$fielddispclass_nama_kel}" data-fieldname="nama_kel">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_nama_kel}">
+				{$label t_keluarga nama_kel}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_nama_kel}
+			</div>
+			<div class="col-md-4" >
+				{$nama_kel_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$nama_kel_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END nama_kel_fieldblock}
+	{BEGIN tgl_lahir_fieldblock}		
+	<div class="container {$fielddispclass_tgl_lahir}" data-fieldname="tgl_lahir">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_tgl_lahir}">
+				{$label t_keluarga tgl_lahir}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_tgl_lahir}
+			</div>
+			<div class="col-md-4" >
+				{$tgl_lahir_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$tgl_lahir_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END tgl_lahir_fieldblock}
+	{BEGIN nik_fieldblock}		
+	<div class="container {$fielddispclass_nik}" data-fieldname="nik">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_nik}">
+				{$label t_keluarga nik}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_nik}
+			</div>
+			<div class="col-md-4" >
+				{$nik_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$nik_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END nik_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container form-horizontal   "> 
+
+
+
+
+{BEGIN container_bbuttons}
+<div {$bbuttons_chiddenattr} data-pageid="{$pageid}" data-container="bbuttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-10 col-md-offset-2"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Cari</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Tata ulang</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Balik ke daftar</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

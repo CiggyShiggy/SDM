@@ -1,0 +1,13 @@
+.rnr-horizontal-lookup {
+	margin-top:7px;
+	min-height:29px;
+}
+
+select.form-control[size="1"] {
+ height: 36px; 
+}
+
+.chosen-container-multi .chosen-choices.chosen-choices {
+ min-height: 36px !important; 
+     border: 1px solid #dddddd;
+}

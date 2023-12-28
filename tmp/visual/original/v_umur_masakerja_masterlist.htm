@@ -1,0 +1,70 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">Back to {$backtomasterlink_caption}</a><span>{$pagetitlelabel v_umur_masakerja masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=id_pegawai]:before {
+		content: "{$label v_umur_masakerja id_pegawai}";
+	}
+	.bs-gridcell[data-field=nama_pegawai]:before {
+		content: "{$label v_umur_masakerja nama_pegawai}";
+	}
+	.bs-gridcell[data-field=tgl_lahir]:before {
+		content: "{$label v_umur_masakerja tgl_lahir}";
+	}
+	.bs-gridcell[data-field=tgl_masuk]:before {
+		content: "{$label v_umur_masakerja tgl_masuk}";
+	}
+	.bs-gridcell[data-field=usia]:before {
+		content: "{$label v_umur_masakerja usia}";
+	}
+	.bs-gridcell[data-field=masa_kerja]:before {
+		content: "{$label v_umur_masakerja masa_kerja}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$id_pegawai_class}">{$label v_umur_masakerja id_pegawai}</th>
+			<th class="{$nama_pegawai_class}">{$label v_umur_masakerja nama_pegawai}</th>
+			<th class="{$tgl_lahir_class}">{$label v_umur_masakerja tgl_lahir}</th>
+			<th class="{$tgl_masuk_class}">{$label v_umur_masakerja tgl_masuk}</th>
+			<th class="{$usia_class}">{$label v_umur_masakerja usia}</th>
+			<th class="{$masa_kerja_class}">{$label v_umur_masakerja masa_kerja}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$id_pegawai_class} bs-gridcell" data-field=id_pegawai>{$id_pegawai_mastervalue}</td>
+			<td class="{$nama_pegawai_class} bs-gridcell" data-field=nama_pegawai>{$nama_pegawai_mastervalue}</td>
+			<td class="{$tgl_lahir_class} bs-gridcell" data-field=tgl_lahir>{$tgl_lahir_mastervalue}</td>
+			<td class="{$tgl_masuk_class} bs-gridcell" data-field=tgl_masuk>{$tgl_masuk_mastervalue}</td>
+			<td class="{$usia_class} bs-gridcell" data-field=usia>{$usia_mastervalue}</td>
+			<td class="{$masa_kerja_class} bs-gridcell" data-field=masa_kerja>{$masa_kerja_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

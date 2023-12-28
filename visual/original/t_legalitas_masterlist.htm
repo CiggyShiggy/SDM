@@ -1,0 +1,70 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">Back to {$backtomasterlink_caption}</a><span>{$pagetitlelabel t_legalitas masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=entry_date]:before {
+		content: "{$label t_legalitas entry_date}";
+	}
+	.bs-gridcell[data-field=id_pegawai]:before {
+		content: "{$label t_legalitas id_pegawai}";
+	}
+	.bs-gridcell[data-field=nama_pegawai]:before {
+		content: "{$label t_legalitas nama_pegawai}";
+	}
+	.bs-gridcell[data-field=id_legalitas]:before {
+		content: "{$label t_legalitas id_legalitas}";
+	}
+	.bs-gridcell[data-field=jenis_legalitas]:before {
+		content: "{$label t_legalitas jenis_legalitas}";
+	}
+	.bs-gridcell[data-field=file]:before {
+		content: "{$label t_legalitas file}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$entry_date_class}">{$label t_legalitas entry_date}</th>
+			<th class="{$id_pegawai_class}">{$label t_legalitas id_pegawai}</th>
+			<th class="{$nama_pegawai_class}">{$label t_legalitas nama_pegawai}</th>
+			<th class="{$id_legalitas_class}">{$label t_legalitas id_legalitas}</th>
+			<th class="{$jenis_legalitas_class}">{$label t_legalitas jenis_legalitas}</th>
+			<th class="{$file_class}">{$label t_legalitas file}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$entry_date_class} bs-gridcell" data-field=entry_date>{$entry_date_mastervalue}</td>
+			<td class="{$id_pegawai_class} bs-gridcell" data-field=id_pegawai>{$id_pegawai_mastervalue}</td>
+			<td class="{$nama_pegawai_class} bs-gridcell" data-field=nama_pegawai>{$nama_pegawai_mastervalue}</td>
+			<td class="{$id_legalitas_class} bs-gridcell" data-field=id_legalitas>{$id_legalitas_mastervalue}</td>
+			<td class="{$jenis_legalitas_class} bs-gridcell" data-field=jenis_legalitas>{$jenis_legalitas_mastervalue}</td>
+			<td class="{$file_class} bs-gridcell" data-field=file>{$file_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

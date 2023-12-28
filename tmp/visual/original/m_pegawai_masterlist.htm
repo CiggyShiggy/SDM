@@ -1,0 +1,154 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">Back to {$backtomasterlink_caption}</a><span>{$pagetitlelabel m_pegawai masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=id_pegawai]:before {
+		content: "{$label m_pegawai id_pegawai}";
+	}
+	.bs-gridcell[data-field=nama_panggilan]:before {
+		content: "{$label m_pegawai nama_panggilan}";
+	}
+	.bs-gridcell[data-field=nama_pegawai]:before {
+		content: "{$label m_pegawai nama_pegawai}";
+	}
+	.bs-gridcell[data-field=jns_kel]:before {
+		content: "{$label m_pegawai jns_kel}";
+	}
+	.bs-gridcell[data-field=tgl_lahir]:before {
+		content: "{$label m_pegawai tgl_lahir}";
+	}
+	.bs-gridcell[data-field=agama]:before {
+		content: "{$label m_pegawai agama}";
+	}
+	.bs-gridcell[data-field=alamat]:before {
+		content: "{$label m_pegawai alamat}";
+	}
+	.bs-gridcell[data-field=no_telp]:before {
+		content: "{$label m_pegawai no_telp}";
+	}
+	.bs-gridcell[data-field=email]:before {
+		content: "{$label m_pegawai email}";
+	}
+	.bs-gridcell[data-field=no_ktp]:before {
+		content: "{$label m_pegawai no_ktp}";
+	}
+	.bs-gridcell[data-field=tgl_masuk]:before {
+		content: "{$label m_pegawai tgl_masuk}";
+	}
+	.bs-gridcell[data-field=pendidikan]:before {
+		content: "{$label m_pegawai pendidikan}";
+	}
+	.bs-gridcell[data-field=prodi]:before {
+		content: "{$label m_pegawai prodi}";
+	}
+	.bs-gridcell[data-field=status_pgw]:before {
+		content: "{$label m_pegawai status_pgw}";
+	}
+	.bs-gridcell[data-field=kategori]:before {
+		content: "{$label m_pegawai kategori}";
+	}
+	.bs-gridcell[data-field=id_cabang]:before {
+		content: "{$label m_pegawai id_cabang}";
+	}
+	.bs-gridcell[data-field=cabang]:before {
+		content: "{$label m_pegawai cabang}";
+	}
+	.bs-gridcell[data-field=id_unit]:before {
+		content: "{$label m_pegawai id_unit}";
+	}
+	.bs-gridcell[data-field=nm_unit]:before {
+		content: "{$label m_pegawai nm_unit}";
+	}
+	.bs-gridcell[data-field=foto]:before {
+		content: "{$label m_pegawai foto}";
+	}
+	.bs-gridcell[data-field=file_ktp]:before {
+		content: "{$label m_pegawai file_ktp}";
+	}
+	.bs-gridcell[data-field=sandi]:before {
+		content: "{$label m_pegawai sandi}";
+	}
+	.bs-gridcell[data-field=keterangan]:before {
+		content: "{$label m_pegawai keterangan}";
+	}
+	.bs-gridcell[data-field=aktif]:before {
+		content: "{$label m_pegawai aktif}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$id_pegawai_class}">{$label m_pegawai id_pegawai}</th>
+			<th class="{$nama_panggilan_class}">{$label m_pegawai nama_panggilan}</th>
+			<th class="{$nama_pegawai_class}">{$label m_pegawai nama_pegawai}</th>
+			<th class="{$jns_kel_class}">{$label m_pegawai jns_kel}</th>
+			<th class="{$tgl_lahir_class}">{$label m_pegawai tgl_lahir}</th>
+			<th class="{$agama_class}">{$label m_pegawai agama}</th>
+			<th class="{$alamat_class}">{$label m_pegawai alamat}</th>
+			<th class="{$no_telp_class}">{$label m_pegawai no_telp}</th>
+			<th class="{$email_class}">{$label m_pegawai email}</th>
+			<th class="{$no_ktp_class}">{$label m_pegawai no_ktp}</th>
+			<th class="{$tgl_masuk_class}">{$label m_pegawai tgl_masuk}</th>
+			<th class="{$pendidikan_class}">{$label m_pegawai pendidikan}</th>
+			<th class="{$prodi_class}">{$label m_pegawai prodi}</th>
+			<th class="{$kategori_class}">{$label m_pegawai kategori}</th>
+			<th class="{$status_pgw_class}">{$label m_pegawai status_pgw}</th>
+			<th class="{$cabang_class}">{$label m_pegawai cabang}</th>
+			<th class="{$nm_unit_class}">{$label m_pegawai nm_unit}</th>
+			<th class="{$foto_class}">{$label m_pegawai foto}</th>
+			<th class="{$file_ktp_class}">{$label m_pegawai file_ktp}</th>
+			<th class="{$keterangan_class}">{$label m_pegawai keterangan}</th>
+			<th class="{$aktif_class}">{$label m_pegawai aktif}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$id_pegawai_class} bs-gridcell" data-field=id_pegawai>{$id_pegawai_mastervalue}</td>
+			<td class="{$nama_panggilan_class} bs-gridcell" data-field=nama_panggilan>{$nama_panggilan_mastervalue}</td>
+			<td class="{$nama_pegawai_class} bs-gridcell" data-field=nama_pegawai>{$nama_pegawai_mastervalue}</td>
+			<td class="{$jns_kel_class} bs-gridcell" data-field=jns_kel>{$jns_kel_mastervalue}</td>
+			<td class="{$tgl_lahir_class} bs-gridcell" data-field=tgl_lahir>{$tgl_lahir_mastervalue}</td>
+			<td class="{$agama_class} bs-gridcell" data-field=agama>{$agama_mastervalue}</td>
+			<td class="{$alamat_class} bs-gridcell" data-field=alamat>{$alamat_mastervalue}</td>
+			<td class="{$no_telp_class} bs-gridcell" data-field=no_telp>{$no_telp_mastervalue}</td>
+			<td class="{$email_class} bs-gridcell" data-field=email>{$email_mastervalue}</td>
+			<td class="{$no_ktp_class} bs-gridcell" data-field=no_ktp>{$no_ktp_mastervalue}</td>
+			<td class="{$tgl_masuk_class} bs-gridcell" data-field=tgl_masuk>{$tgl_masuk_mastervalue}</td>
+			<td class="{$pendidikan_class} bs-gridcell" data-field=pendidikan>{$pendidikan_mastervalue}</td>
+			<td class="{$prodi_class} bs-gridcell" data-field=prodi>{$prodi_mastervalue}</td>
+			<td class="{$kategori_class} bs-gridcell" data-field=kategori>{$kategori_mastervalue}</td>
+			<td class="{$status_pgw_class} bs-gridcell" data-field=status_pgw>{$status_pgw_mastervalue}</td>
+			<td class="{$cabang_class} bs-gridcell" data-field=cabang>{$cabang_mastervalue}</td>
+			<td class="{$nm_unit_class} bs-gridcell" data-field=nm_unit>{$nm_unit_mastervalue}</td>
+			<td class="{$foto_class} bs-gridcell" data-field=foto>{$foto_mastervalue}</td>
+			<td class="{$file_ktp_class} bs-gridcell" data-field=file_ktp>{$file_ktp_mastervalue}</td>
+			<td class="{$keterangan_class} bs-gridcell" data-field=keterangan>{$keterangan_mastervalue}</td>
+			<td class="{$aktif_class} bs-gridcell" data-field=aktif>{$aktif_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

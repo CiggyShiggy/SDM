@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}>
+  <HEAD>
+    <META http-equiv="X-UA-Compatible" content="IE=Edge">
+    <META name="viewport" content="width=device-width, initial-scale=1.0">
+    <TITLE>
+      {$pagetitle}
+    </TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <LINK href="styles/default.css" rel="stylesheet" type="text/css">
+    {BEGIN rtlCSS}
+      <LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <LINK href="{$stylepath}" rel="stylesheet" type="text/css">
+    {END styleCSSFiles}
+    <META name="GENERATOR" content="MSHTML 11.00.10570.1001">
+  </HEAD>
+  <BODY class="{$stylename} function-edit" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <STYLE>
+        {$containerCss}
+      </STYLE>
+      <DIV class="bs-top">
+        {BEGIN container_editpage}
+          <DIV class="container" data-container="editpage" data-pageid="{$pageid}" {$editpage_chiddenattr}>
+            {BEGIN container_header}
+              <DIV class="col-md-9 col-md-offset-3" data-container="header" data-pageid="{$pageid}" {$header_chiddenattr}>
+                {BEGIN editheader}
+                  <H2 data-brick="editheader" data-pageid="{$pageid}" {$editheader_hiddenattr}>
+                    {$pagetitlelabel v_approve_cuti edit}
+                  </H2>
+                  {BEGIN printtabheader}
+                    <H4>
+                      {$printtabheader_text}
+                    </H4>
+                  {END printtabheader}
+                {END editheader}
+              </DIV>
+            {END container_header}
+            {BEGIN container_message}
+              <DIV class="col-md-6 col-md-offset-3" data-container="message" data-pageid="{$pageid}" {$message_chiddenattr}>
+                {BEGIN message_block}
+                  <DIV class="alert {$message_class}" role="alert" data-brick="message" data-pageid="{$pageid}" {$message_hiddenattr}>
+                    <H5>
+                      {$message}
+                    </H5>
+                    <DIV>
+                      {BEGIN back_button}
+                        <BUTTON class="btn btn-sm btn-default" {$backbutton_attrs}>
+                          Balik ke daftar
+                        </BUTTON>
+                      {END back_button}
+                      {BEGIN view_page_button}
+                        <BUTTON class="btn btn-sm btn-default" {$view_page_button_attrs}>
+                          Lihat
+                        </BUTTON>
+                      {END view_page_button}
+                    </DIV>
+                  </DIV>
+                {END message_block}
+              </DIV>
+            {END container_message}
+          </DIV>
+        {END container_editpage}
+        {BEGIN container_fields}
+          <DIV class="col-md-12" data-container="fields" data-pageid="{$pageid}" {$fields_chiddenattr}>
+            <DIV class="form-horizontal" role="form" data-brick="editfields" data-pageid="{$pageid}" {$editfields_hiddenattr}>
+              {BEGIN id_pegawai_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_id_pegawai}" data-signal-error-for="id_pegawai{$id}" data-fieldname="id_pegawai">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_id_pegawai}">
+                      {BEGIN id_pegawai_label}
+                        {$label v_approve_cuti id_pegawai}
+                      {END id_pegawai_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$id_pegawai_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="id_pegawai">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti id_pegawai}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END id_pegawai_fieldblock}
+              {BEGIN entry_user_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_entry_user}" data-signal-error-for="entry_user{$id}" data-fieldname="entry_user">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_entry_user}">
+                      {BEGIN entry_user_label}
+                        {$label v_approve_cuti entry_user}
+                      {END entry_user_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$entry_user_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="entry_user">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti entry_user}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END entry_user_fieldblock}
+              {BEGIN nama_cabang_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_nama_cabang}" data-signal-error-for="nama_cabang{$id}" data-fieldname="nama_cabang">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_nama_cabang}">
+                      {BEGIN nama_cabang_label}
+                        {$label v_approve_cuti nama_cabang}
+                      {END nama_cabang_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$nama_cabang_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="nama_cabang">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti nama_cabang}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END nama_cabang_fieldblock}
+              {BEGIN tgl_mulai_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_tgl_mulai}" data-signal-error-for="tgl_mulai{$id}" data-fieldname="tgl_mulai">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_tgl_mulai}">
+                      {BEGIN tgl_mulai_label}
+                        {$label v_approve_cuti tgl_mulai}
+                      {END tgl_mulai_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$tgl_mulai_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="tgl_mulai">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti tgl_mulai}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END tgl_mulai_fieldblock}
+              {BEGIN tgl_selesai_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_tgl_selesai}" data-signal-error-for="tgl_selesai{$id}" data-fieldname="tgl_selesai">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_tgl_selesai}">
+                      {BEGIN tgl_selesai_label}
+                        {$label v_approve_cuti tgl_selesai}
+                      {END tgl_selesai_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$tgl_selesai_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="tgl_selesai">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti tgl_selesai}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END tgl_selesai_fieldblock}
+              {BEGIN kode_jc_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_kode_jc}" data-signal-error-for="kode_jc{$id}" data-fieldname="kode_jc">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_kode_jc}">
+                      {BEGIN kode_jc_label}
+                        {$label v_approve_cuti kode_jc}
+                      {END kode_jc_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$kode_jc_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="kode_jc">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti kode_jc}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END kode_jc_fieldblock}
+      {BEGIN cuti_dipakai_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_cuti_dipakai}" data-signal-error-for="cuti_dipakai{$id}" data-fieldname="cuti_dipakai">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_cuti_dipakai}">
+                      {BEGIN cuti_dipakai_label}
+                        {$label v_approve_cuti cuti_dipakai}
+                      {END cuti_dipakai_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$cuti_dipakai_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="cuti_dipakai">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti cuti_dipakai}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END cuti_dipakai_fieldblock}
+              {BEGIN alasan_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_alasan}" data-signal-error-for="alasan{$id}" data-fieldname="alasan">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_alasan}">
+                      {BEGIN alasan_label}
+                        {$label v_approve_cuti alasan}
+                      {END alasan_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$alasan_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="alasan">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti alasan}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END alasan_fieldblock}
+              {BEGIN approve_datemgr_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_approve_datemgr}" data-signal-error-for="approve_datemgr{$id}" data-fieldname="approve_datemgr">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_approve_datemgr}">
+                      {BEGIN approve_datemgr_label}
+                        {$label v_approve_cuti approve_datemgr}
+                      {END approve_datemgr_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$approve_datemgr_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="approve_datemgr">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti approve_datemgr}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END approve_datemgr_fieldblock}
+              {BEGIN approve_mngr_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_approve_mngr}" data-signal-error-for="approve_mngr{$id}" data-fieldname="approve_mngr">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_approve_mngr}">
+                      {BEGIN approve_mngr_label}
+                        {$label v_approve_cuti approve_mngr}
+                      {END approve_mngr_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$approve_mngr_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="approve_mngr">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti approve_mngr}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END approve_mngr_fieldblock}
+              {BEGIN approve_datehr_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_approve_datehr}" data-signal-error-for="approve_datehr{$id}" data-fieldname="approve_datehr">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_approve_datehr}">
+                      {BEGIN approve_datehr_label}
+                        {$label v_approve_cuti approve_datehr}
+                      {END approve_datehr_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$approve_datehr_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="approve_datehr">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti approve_datehr}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END approve_datehr_fieldblock}
+              {BEGIN approve_hrd_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_approve_hrd}" data-signal-error-for="approve_hrd{$id}" data-fieldname="approve_hrd">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_approve_hrd}">
+                      {BEGIN approve_hrd_label}
+                        {$label v_approve_cuti approve_hrd}
+                      {END approve_hrd_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$approve_hrd_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="approve_hrd">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti approve_hrd}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END approve_hrd_fieldblock}
+              {BEGIN statuss_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_statuss}" data-signal-error-for="statuss{$id}" data-fieldname="statuss">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_statuss}">
+                      {BEGIN statuss_label}
+                        {$label v_approve_cuti statuss}
+                      {END statuss_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$statuss_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="statuss">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti statuss}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END statuss_fieldblock}
+        
+              {BEGIN catatan_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_catatan}" data-signal-error-for="catatan{$id}" data-fieldname="catatan">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_catatan}">
+                      {BEGIN catatan_label}
+                        {$label v_approve_cuti catatan}
+                      {END catatan_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$catatan_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="catatan">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti catatan}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END catatan_fieldblock}
+              {BEGIN surat_sakit_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_surat_sakit}" data-signal-error-for="surat_sakit{$id}" data-fieldname="surat_sakit">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_surat_sakit}">
+                      {BEGIN surat_sakit_label}
+                        {$label v_approve_cuti surat_sakit}
+                      {END surat_sakit_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$surat_sakit_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="surat_sakit">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti surat_sakit}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END surat_sakit_fieldblock}
+              {BEGIN lock_hrd_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_lock_hrd}" data-signal-error-for="lock_hrd{$id}" data-fieldname="lock_hrd">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_lock_hrd}">
+                      {BEGIN lock_hrd_label}
+                        {$label v_approve_cuti lock_hrd}
+                      {END lock_hrd_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$lock_hrd_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="lock_hrd">
+                      <DIV class="text-muted">
+                        {$tooltip v_approve_cuti lock_hrd}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END lock_hrd_fieldblock}
+            </DIV>
+          </DIV>
+        {END container_fields}
+        {BEGIN container_bottombuttons}
+          <DIV class="container" data-container="bottombuttons" data-pageid="{$pageid}" {$bottombuttons_chiddenattr}>
+            {BEGIN container_buttons}
+              <DIV class="form-group" data-container="buttons" data-pageid="{$pageid}" {$buttons_chiddenattr}>
+                {BEGIN container_leftbuttons}
+                  <DIV class="col-md-3 col-md-offset-3" data-container="leftbuttons" data-pageid="{$pageid}" {$leftbuttons_chiddenattr}>
+                    {BEGIN editbuttons}
+                      {BEGIN save_button}
+                        <BUTTON class="btn btn-primary" {$savebutton_attrs}>
+                          Simpan
+                        </BUTTON>
+                      {END save_button}
+                      {BEGIN back_button}
+                        <BUTTON class="btn btn-default" {$backbutton_attrs}>
+                          Balik ke daftar
+                        </BUTTON>
+                      {END back_button}
+                      {BEGIN close_button}
+                        <A class="btn btn-default" href="#" {$closebutton_attrs}>
+                          Batal
+                        </A>
+                      {END close_button}
+                    {END editbuttons}
+                  </DIV>
+                {END container_leftbuttons}
+                {BEGIN container_leftbuttons_1}
+                  <DIV class="text-right col-md-3" data-container="leftbuttons_1" data-pageid="{$pageid}" {$leftbuttons_1_chiddenattr}>
+                    {BEGIN righteditbuttons}
+                      <DIV class="btn-group" role="group">
+                        {BEGIN prev_button}
+                          <BUTTON class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}>
+                            <SPAN class="glyphicon glyphicon-chevron-left">
+                            </SPAN>
+                          </BUTTON>
+                        {END prev_button}
+                        {BEGIN next_button}
+                          <BUTTON class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}>
+                            <SPAN class="glyphicon glyphicon-chevron-right">
+                            </SPAN>
+                          </BUTTON>
+                        {END next_button}
+                        <DIV class="btn-group dropup" role="group">
+                          <BUTTON class="btn btn-default dropdown-toggle" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">
+                            <SPAN class="glyphicon glyphicon-menu-hamburger">
+                            </SPAN>
+                          </BUTTON>
+                          <UL class="dropdown-menu dropdown-left">
+                            {BEGIN reset_button}
+                              <LI>
+                                <A href="#" {$resetbutton_attrs}>
+                                  Tata ulang
+                                </A>
+                              </LI>
+                            {END reset_button}
+                            {BEGIN view_page_button}
+                              <LI>
+                                <A href="#" {$view_page_button_attrs}>
+                                  Lihat
+                                </A>
+                              </LI>
+                            {END view_page_button}
+                          </UL>
+                        </DIV>
+                      </DIV>
+                    {END righteditbuttons}
+                  </DIV>
+                {END container_leftbuttons_1}
+              </DIV>
+            {END container_buttons}
+          </DIV>
+        {END container_bottombuttons}
+      </DIV>
+      <DIV class="bs-middle">
+        <DIV class="bs-topmiddle">
+        </DIV>
+        <DIV class="bs-left" {$blockattr_left}>
+        </DIV>
+        <DIV class="bs-center">
+        </DIV>
+        <DIV class="bs-right">
+        </DIV>
+      </DIV>
+      <DIV class="bs-bottom">
+      </DIV>
+      {$footer}
+    {END body}
+  </BODY>
+</HTML>

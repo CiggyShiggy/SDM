@@ -1,0 +1,595 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel v_edit_mpegawai add}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Balik ke daftar</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Lihat</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN nama_panggilan_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_nama_panggilan}" data-fieldname="nama_panggilan" data-signal-error-for="nama_panggilan{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_nama_panggilan}">
+		{BEGIN nama_panggilan_label}{$label v_edit_mpegawai nama_panggilan}{END nama_panggilan_label}
+	</label>
+	<div class="col-md-6" >
+		{$nama_panggilan_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="nama_panggilan">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai nama_panggilan}
+		</div>
+	</div>
+</div>
+</div>
+{END nama_panggilan_fieldblock}
+
+			{BEGIN jns_kel_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_jns_kel}" data-fieldname="jns_kel" data-signal-error-for="jns_kel{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_jns_kel}">
+		{BEGIN jns_kel_label}{$label v_edit_mpegawai jns_kel}{END jns_kel_label}
+	</label>
+	<div class="col-md-6" >
+		{$jns_kel_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="jns_kel">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai jns_kel}
+		</div>
+	</div>
+</div>
+</div>
+{END jns_kel_fieldblock}
+
+			{BEGIN tgl_lahir_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_tgl_lahir}" data-fieldname="tgl_lahir" data-signal-error-for="tgl_lahir{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_tgl_lahir}">
+		{BEGIN tgl_lahir_label}{$label v_edit_mpegawai tgl_lahir}{END tgl_lahir_label}
+	</label>
+	<div class="col-md-6" >
+		{$tgl_lahir_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="tgl_lahir">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai tgl_lahir}
+		</div>
+	</div>
+</div>
+</div>
+{END tgl_lahir_fieldblock}
+
+			{BEGIN agama_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_agama}" data-fieldname="agama" data-signal-error-for="agama{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_agama}">
+		{BEGIN agama_label}{$label v_edit_mpegawai agama}{END agama_label}
+	</label>
+	<div class="col-md-6" >
+		{$agama_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="agama">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai agama}
+		</div>
+	</div>
+</div>
+</div>
+{END agama_fieldblock}
+
+			{BEGIN no_ktp_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_no_ktp}" data-fieldname="no_ktp" data-signal-error-for="no_ktp{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_no_ktp}">
+		{BEGIN no_ktp_label}{$label v_edit_mpegawai no_ktp}{END no_ktp_label}
+	</label>
+	<div class="col-md-6" >
+		{$no_ktp_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="no_ktp">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai no_ktp}
+		</div>
+	</div>
+</div>
+</div>
+{END no_ktp_fieldblock}
+
+			{BEGIN tgl_masuk_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_tgl_masuk}" data-fieldname="tgl_masuk" data-signal-error-for="tgl_masuk{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_tgl_masuk}">
+		{BEGIN tgl_masuk_label}{$label v_edit_mpegawai tgl_masuk}{END tgl_masuk_label}
+	</label>
+	<div class="col-md-6" >
+		{$tgl_masuk_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="tgl_masuk">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai tgl_masuk}
+		</div>
+	</div>
+</div>
+</div>
+{END tgl_masuk_fieldblock}
+
+			{BEGIN pendidikan_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_pendidikan}" data-fieldname="pendidikan" data-signal-error-for="pendidikan{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_pendidikan}">
+		{BEGIN pendidikan_label}{$label v_edit_mpegawai pendidikan}{END pendidikan_label}
+	</label>
+	<div class="col-md-6" >
+		{$pendidikan_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="pendidikan">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai pendidikan}
+		</div>
+	</div>
+</div>
+</div>
+{END pendidikan_fieldblock}
+
+			{BEGIN prodi_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_prodi}" data-fieldname="prodi" data-signal-error-for="prodi{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_prodi}">
+		{BEGIN prodi_label}{$label v_edit_mpegawai prodi}{END prodi_label}
+	</label>
+	<div class="col-md-6" >
+		{$prodi_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="prodi">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai prodi}
+		</div>
+	</div>
+</div>
+</div>
+{END prodi_fieldblock}
+
+			{BEGIN status_pgw_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_status_pgw}" data-fieldname="status_pgw" data-signal-error-for="status_pgw{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_status_pgw}">
+		{BEGIN status_pgw_label}{$label v_edit_mpegawai status_pgw}{END status_pgw_label}
+	</label>
+	<div class="col-md-6" >
+		{$status_pgw_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="status_pgw">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai status_pgw}
+		</div>
+	</div>
+</div>
+</div>
+{END status_pgw_fieldblock}
+
+			{BEGIN kategori_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_kategori}" data-fieldname="kategori" data-signal-error-for="kategori{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_kategori}">
+		{BEGIN kategori_label}{$label v_edit_mpegawai kategori}{END kategori_label}
+	</label>
+	<div class="col-md-6" >
+		{$kategori_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="kategori">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai kategori}
+		</div>
+	</div>
+</div>
+</div>
+{END kategori_fieldblock}
+
+			{BEGIN id_penempatan_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_id_penempatan}" data-fieldname="id_penempatan" data-signal-error-for="id_penempatan{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_id_penempatan}">
+		{BEGIN id_penempatan_label}{$label v_edit_mpegawai id_penempatan}{END id_penempatan_label}
+	</label>
+	<div class="col-md-6" >
+		{$id_penempatan_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="id_penempatan">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai id_penempatan}
+		</div>
+	</div>
+</div>
+</div>
+{END id_penempatan_fieldblock}
+
+			{BEGIN penempatan_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_penempatan}" data-fieldname="penempatan" data-signal-error-for="penempatan{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_penempatan}">
+		{BEGIN penempatan_label}{$label v_edit_mpegawai penempatan}{END penempatan_label}
+	</label>
+	<div class="col-md-6" >
+		{$penempatan_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="penempatan">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai penempatan}
+		</div>
+	</div>
+</div>
+</div>
+{END penempatan_fieldblock}
+
+			{BEGIN id_unit_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_id_unit}" data-fieldname="id_unit" data-signal-error-for="id_unit{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_id_unit}">
+		{BEGIN id_unit_label}{$label v_edit_mpegawai id_unit}{END id_unit_label}
+	</label>
+	<div class="col-md-6" >
+		{$id_unit_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="id_unit">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai id_unit}
+		</div>
+	</div>
+</div>
+</div>
+{END id_unit_fieldblock}
+
+			{BEGIN nm_unit_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_nm_unit}" data-fieldname="nm_unit" data-signal-error-for="nm_unit{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_nm_unit}">
+		{BEGIN nm_unit_label}{$label v_edit_mpegawai nm_unit}{END nm_unit_label}
+	</label>
+	<div class="col-md-6" >
+		{$nm_unit_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="nm_unit">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai nm_unit}
+		</div>
+	</div>
+</div>
+</div>
+{END nm_unit_fieldblock}
+
+			{BEGIN foto_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_foto}" data-fieldname="foto" data-signal-error-for="foto{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_foto}">
+		{BEGIN foto_label}{$label v_edit_mpegawai foto}{END foto_label}
+	</label>
+	<div class="col-md-6" >
+		{$foto_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="foto">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai foto}
+		</div>
+	</div>
+</div>
+</div>
+{END foto_fieldblock}
+
+			{BEGIN file_ktp_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_file_ktp}" data-fieldname="file_ktp" data-signal-error-for="file_ktp{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_file_ktp}">
+		{BEGIN file_ktp_label}{$label v_edit_mpegawai file_ktp}{END file_ktp_label}
+	</label>
+	<div class="col-md-6" >
+		{$file_ktp_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="file_ktp">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai file_ktp}
+		</div>
+	</div>
+</div>
+</div>
+{END file_ktp_fieldblock}
+
+			{BEGIN keterangan_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_keterangan}" data-fieldname="keterangan" data-signal-error-for="keterangan{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_keterangan}">
+		{BEGIN keterangan_label}{$label v_edit_mpegawai keterangan}{END keterangan_label}
+	</label>
+	<div class="col-md-6" >
+		{$keterangan_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="keterangan">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai keterangan}
+		</div>
+	</div>
+</div>
+</div>
+{END keterangan_fieldblock}
+
+			{BEGIN aktif_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_aktif}" data-fieldname="aktif" data-signal-error-for="aktif{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_aktif}">
+		{BEGIN aktif_label}{$label v_edit_mpegawai aktif}{END aktif_label}
+	</label>
+	<div class="col-md-6" >
+		{$aktif_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="aktif">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai aktif}
+		</div>
+	</div>
+</div>
+</div>
+{END aktif_fieldblock}
+
+			{BEGIN id_pegawai_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_id_pegawai}" data-fieldname="id_pegawai" data-signal-error-for="id_pegawai{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_id_pegawai}">
+		{BEGIN id_pegawai_label}{$label v_edit_mpegawai id_pegawai}{END id_pegawai_label}
+	</label>
+	<div class="col-md-6" >
+		{$id_pegawai_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="id_pegawai">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai id_pegawai}
+		</div>
+	</div>
+</div>
+</div>
+{END id_pegawai_fieldblock}
+
+			{BEGIN nama_pegawai_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_nama_pegawai}" data-fieldname="nama_pegawai" data-signal-error-for="nama_pegawai{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_nama_pegawai}">
+		{BEGIN nama_pegawai_label}{$label v_edit_mpegawai nama_pegawai}{END nama_pegawai_label}
+	</label>
+	<div class="col-md-6" >
+		{$nama_pegawai_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="nama_pegawai">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai nama_pegawai}
+		</div>
+	</div>
+</div>
+</div>
+{END nama_pegawai_fieldblock}
+
+			{BEGIN alamat_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_alamat}" data-fieldname="alamat" data-signal-error-for="alamat{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_alamat}">
+		{BEGIN alamat_label}{$label v_edit_mpegawai alamat}{END alamat_label}
+	</label>
+	<div class="col-md-6" >
+		{$alamat_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="alamat">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai alamat}
+		</div>
+	</div>
+</div>
+</div>
+{END alamat_fieldblock}
+
+			{BEGIN no_telp_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_no_telp}" data-fieldname="no_telp" data-signal-error-for="no_telp{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_no_telp}">
+		{BEGIN no_telp_label}{$label v_edit_mpegawai no_telp}{END no_telp_label}
+	</label>
+	<div class="col-md-6" >
+		{$no_telp_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="no_telp">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai no_telp}
+		</div>
+	</div>
+</div>
+</div>
+{END no_telp_fieldblock}
+
+			{BEGIN email_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_email}" data-fieldname="email" data-signal-error-for="email{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_email}">
+		{BEGIN email_label}{$label v_edit_mpegawai email}{END email_label}
+	</label>
+	<div class="col-md-6" >
+		{$email_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="email">
+		<div class="text-muted" >
+		{$tooltip v_edit_mpegawai email}
+		</div>
+	</div>
+</div>
+</div>
+{END email_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Simpan</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">Tata ulang</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">Balik ke daftar</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">Batal</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

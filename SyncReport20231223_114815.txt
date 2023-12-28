@@ -1,0 +1,9 @@
+Modified tables ("-" means deleted field, "+" means new field):
+	● m_unit_kerja:
+		 + ls_pengajuan
+		 + md_departemen_kode
+	● t_legalitas_perusahaan:
+		 + m_cabang_id
+		 + status
+	● t_mou_vendor:
+		 + judul

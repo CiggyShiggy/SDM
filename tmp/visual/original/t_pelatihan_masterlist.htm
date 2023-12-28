@@ -1,0 +1,90 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">Back to {$backtomasterlink_caption}</a><span>{$pagetitlelabel t_pelatihan masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=entry_date]:before {
+		content: "{$label t_pelatihan entry_date}";
+	}
+	.bs-gridcell[data-field=id_pegawai]:before {
+		content: "{$label t_pelatihan id_pegawai}";
+	}
+	.bs-gridcell[data-field=nama_pegawai]:before {
+		content: "{$label t_pelatihan nama_pegawai}";
+	}
+	.bs-gridcell[data-field=tgl_mulai]:before {
+		content: "{$label t_pelatihan tgl_mulai}";
+	}
+	.bs-gridcell[data-field=tgl_selesai]:before {
+		content: "{$label t_pelatihan tgl_selesai}";
+	}
+	.bs-gridcell[data-field=judul]:before {
+		content: "{$label t_pelatihan judul}";
+	}
+	.bs-gridcell[data-field=tempat]:before {
+		content: "{$label t_pelatihan tempat}";
+	}
+	.bs-gridcell[data-field=penyelenggara]:before {
+		content: "{$label t_pelatihan penyelenggara}";
+	}
+	.bs-gridcell[data-field=file_sertifikat]:before {
+		content: "{$label t_pelatihan file_sertifikat}";
+	}
+	.bs-gridcell[data-field=file_materi]:before {
+		content: "{$label t_pelatihan file_materi}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$entry_date_class}">{$label t_pelatihan entry_date}</th>
+			<th class="{$id_pegawai_class}">{$label t_pelatihan id_pegawai}</th>
+			<th class="{$nama_pegawai_class}">{$label t_pelatihan nama_pegawai}</th>
+			<th class="{$tgl_mulai_class}">{$label t_pelatihan tgl_mulai}</th>
+			<th class="{$tgl_selesai_class}">{$label t_pelatihan tgl_selesai}</th>
+			<th class="{$judul_class}">{$label t_pelatihan judul}</th>
+			<th class="{$tempat_class}">{$label t_pelatihan tempat}</th>
+			<th class="{$penyelenggara_class}">{$label t_pelatihan penyelenggara}</th>
+			<th class="{$file_sertifikat_class}">{$label t_pelatihan file_sertifikat}</th>
+			<th class="{$file_materi_class}">{$label t_pelatihan file_materi}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$entry_date_class} bs-gridcell" data-field=entry_date>{$entry_date_mastervalue}</td>
+			<td class="{$id_pegawai_class} bs-gridcell" data-field=id_pegawai>{$id_pegawai_mastervalue}</td>
+			<td class="{$nama_pegawai_class} bs-gridcell" data-field=nama_pegawai>{$nama_pegawai_mastervalue}</td>
+			<td class="{$tgl_mulai_class} bs-gridcell" data-field=tgl_mulai>{$tgl_mulai_mastervalue}</td>
+			<td class="{$tgl_selesai_class} bs-gridcell" data-field=tgl_selesai>{$tgl_selesai_mastervalue}</td>
+			<td class="{$judul_class} bs-gridcell" data-field=judul>{$judul_mastervalue}</td>
+			<td class="{$tempat_class} bs-gridcell" data-field=tempat>{$tempat_mastervalue}</td>
+			<td class="{$penyelenggara_class} bs-gridcell" data-field=penyelenggara>{$penyelenggara_mastervalue}</td>
+			<td class="{$file_sertifikat_class} bs-gridcell" data-field=file_sertifikat>{$file_sertifikat_mastervalue}</td>
+			<td class="{$file_materi_class} bs-gridcell" data-field=file_materi>{$file_materi_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

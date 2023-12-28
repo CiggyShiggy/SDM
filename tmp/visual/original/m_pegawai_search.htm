@@ -1,0 +1,581 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel m_pegawai search}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN id_pegawai_fieldblock}		
+	<div class="container {$fielddispclass_id_pegawai}" data-fieldname="id_pegawai">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_id_pegawai}">
+				{$label m_pegawai id_pegawai}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_id_pegawai}
+			</div>
+			<div class="col-md-4" >
+				{$id_pegawai_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$id_pegawai_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END id_pegawai_fieldblock}
+	{BEGIN nama_panggilan_fieldblock}		
+	<div class="container {$fielddispclass_nama_panggilan}" data-fieldname="nama_panggilan">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_nama_panggilan}">
+				{$label m_pegawai nama_panggilan}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_nama_panggilan}
+			</div>
+			<div class="col-md-4" >
+				{$nama_panggilan_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$nama_panggilan_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END nama_panggilan_fieldblock}
+	{BEGIN nama_pegawai_fieldblock}		
+	<div class="container {$fielddispclass_nama_pegawai}" data-fieldname="nama_pegawai">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_nama_pegawai}">
+				{$label m_pegawai nama_pegawai}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_nama_pegawai}
+			</div>
+			<div class="col-md-4" >
+				{$nama_pegawai_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$nama_pegawai_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END nama_pegawai_fieldblock}
+	{BEGIN jns_kel_fieldblock}		
+	<div class="container {$fielddispclass_jns_kel}" data-fieldname="jns_kel">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_jns_kel}">
+				{$label m_pegawai jns_kel}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_jns_kel}
+			</div>
+			<div class="col-md-4" >
+				{$jns_kel_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$jns_kel_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END jns_kel_fieldblock}
+	{BEGIN tgl_lahir_fieldblock}		
+	<div class="container {$fielddispclass_tgl_lahir}" data-fieldname="tgl_lahir">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_tgl_lahir}">
+				{$label m_pegawai tgl_lahir}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_tgl_lahir}
+			</div>
+			<div class="col-md-4" >
+				{$tgl_lahir_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$tgl_lahir_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END tgl_lahir_fieldblock}
+	{BEGIN agama_fieldblock}		
+	<div class="container {$fielddispclass_agama}" data-fieldname="agama">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_agama}">
+				{$label m_pegawai agama}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_agama}
+			</div>
+			<div class="col-md-4" >
+				{$agama_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$agama_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END agama_fieldblock}
+	{BEGIN alamat_fieldblock}		
+	<div class="container {$fielddispclass_alamat}" data-fieldname="alamat">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_alamat}">
+				{$label m_pegawai alamat}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_alamat}
+			</div>
+			<div class="col-md-4" >
+				{$alamat_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$alamat_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END alamat_fieldblock}
+	{BEGIN no_telp_fieldblock}		
+	<div class="container {$fielddispclass_no_telp}" data-fieldname="no_telp">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_no_telp}">
+				{$label m_pegawai no_telp}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_no_telp}
+			</div>
+			<div class="col-md-4" >
+				{$no_telp_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$no_telp_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END no_telp_fieldblock}
+	{BEGIN email_fieldblock}		
+	<div class="container {$fielddispclass_email}" data-fieldname="email">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_email}">
+				{$label m_pegawai email}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_email}
+			</div>
+			<div class="col-md-4" >
+				{$email_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$email_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END email_fieldblock}
+	{BEGIN no_ktp_fieldblock}		
+	<div class="container {$fielddispclass_no_ktp}" data-fieldname="no_ktp">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_no_ktp}">
+				{$label m_pegawai no_ktp}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_no_ktp}
+			</div>
+			<div class="col-md-4" >
+				{$no_ktp_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$no_ktp_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END no_ktp_fieldblock}
+	{BEGIN tgl_masuk_fieldblock}		
+	<div class="container {$fielddispclass_tgl_masuk}" data-fieldname="tgl_masuk">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_tgl_masuk}">
+				{$label m_pegawai tgl_masuk}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_tgl_masuk}
+			</div>
+			<div class="col-md-4" >
+				{$tgl_masuk_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$tgl_masuk_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END tgl_masuk_fieldblock}
+	{BEGIN pendidikan_fieldblock}		
+	<div class="container {$fielddispclass_pendidikan}" data-fieldname="pendidikan">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_pendidikan}">
+				{$label m_pegawai pendidikan}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_pendidikan}
+			</div>
+			<div class="col-md-4" >
+				{$pendidikan_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$pendidikan_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END pendidikan_fieldblock}
+	{BEGIN prodi_fieldblock}		
+	<div class="container {$fielddispclass_prodi}" data-fieldname="prodi">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_prodi}">
+				{$label m_pegawai prodi}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_prodi}
+			</div>
+			<div class="col-md-4" >
+				{$prodi_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$prodi_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END prodi_fieldblock}
+	{BEGIN kategori_fieldblock}		
+	<div class="container {$fielddispclass_kategori}" data-fieldname="kategori">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_kategori}">
+				{$label m_pegawai kategori}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_kategori}
+			</div>
+			<div class="col-md-4" >
+				{$kategori_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$kategori_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END kategori_fieldblock}
+	{BEGIN status_pgw_fieldblock}		
+	<div class="container {$fielddispclass_status_pgw}" data-fieldname="status_pgw">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_status_pgw}">
+				{$label m_pegawai status_pgw}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_status_pgw}
+			</div>
+			<div class="col-md-4" >
+				{$status_pgw_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$status_pgw_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END status_pgw_fieldblock}
+	{BEGIN id_cabang_fieldblock}		
+	<div class="container {$fielddispclass_id_cabang}" data-fieldname="id_cabang">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_id_cabang}">
+				{$label m_pegawai id_cabang}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_id_cabang}
+			</div>
+			<div class="col-md-4" >
+				{$id_cabang_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$id_cabang_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END id_cabang_fieldblock}
+	{BEGIN cabang_fieldblock}		
+	<div class="container {$fielddispclass_cabang}" data-fieldname="cabang">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_cabang}">
+				{$label m_pegawai cabang}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_cabang}
+			</div>
+			<div class="col-md-4" >
+				{$cabang_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$cabang_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END cabang_fieldblock}
+	{BEGIN nm_unit_fieldblock}		
+	<div class="container {$fielddispclass_nm_unit}" data-fieldname="nm_unit">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_nm_unit}">
+				{$label m_pegawai nm_unit}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_nm_unit}
+			</div>
+			<div class="col-md-4" >
+				{$nm_unit_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$nm_unit_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END nm_unit_fieldblock}
+	{BEGIN id_unit_fieldblock}		
+	<div class="container {$fielddispclass_id_unit}" data-fieldname="id_unit">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_id_unit}">
+				{$label m_pegawai id_unit}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_id_unit}
+			</div>
+			<div class="col-md-4" >
+				{$id_unit_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$id_unit_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END id_unit_fieldblock}
+	{BEGIN foto_fieldblock}		
+	<div class="container {$fielddispclass_foto}" data-fieldname="foto">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_foto}">
+				{$label m_pegawai foto}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_foto}
+			</div>
+			<div class="col-md-4" >
+				{$foto_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$foto_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END foto_fieldblock}
+	{BEGIN file_ktp_fieldblock}		
+	<div class="container {$fielddispclass_file_ktp}" data-fieldname="file_ktp">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_file_ktp}">
+				{$label m_pegawai file_ktp}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_file_ktp}
+			</div>
+			<div class="col-md-4" >
+				{$file_ktp_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$file_ktp_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END file_ktp_fieldblock}
+	{BEGIN keterangan_fieldblock}		
+	<div class="container {$fielddispclass_keterangan}" data-fieldname="keterangan">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_keterangan}">
+				{$label m_pegawai keterangan}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_keterangan}
+			</div>
+			<div class="col-md-4" >
+				{$keterangan_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$keterangan_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END keterangan_fieldblock}
+	{BEGIN aktif_fieldblock}		
+	<div class="container {$fielddispclass_aktif}" data-fieldname="aktif">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_aktif}">
+				{$label m_pegawai aktif}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_aktif}
+			</div>
+			<div class="col-md-4" >
+				{$aktif_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$aktif_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END aktif_fieldblock}
+	{BEGIN sandi_fieldblock}		
+	<div class="container {$fielddispclass_sandi}" data-fieldname="sandi">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_sandi}">
+				{$label m_pegawai sandi}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_sandi}
+			</div>
+			<div class="col-md-4" >
+				{$sandi_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$sandi_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END sandi_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container form-horizontal   "> 
+
+
+
+
+{BEGIN container_bbuttons}
+<div {$bbuttons_chiddenattr} data-pageid="{$pageid}" data-container="bbuttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-10 col-md-offset-2"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Cari</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Tata ulang</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Balik ke daftar</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

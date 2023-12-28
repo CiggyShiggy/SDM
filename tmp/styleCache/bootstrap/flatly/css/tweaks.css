@@ -1,0 +1,40 @@
+/* icon underlines */
+
+.glyphicon.glyphicon:not(:hover) {
+	text-decoration: none;
+}
+
+
+.btn.disabled:not(:hover), .btn[disabled]:not(:hover) {
+	color: #aaa;
+}
+
+
+.rnr-horizontal-lookup {
+	margin-top:10px;
+	min-height:35px;
+}
+
+select.form-control[size="1"] {
+ height: 45px; 
+}
+
+.chosen-container-multi .chosen-choices.chosen-choices {
+ min-height: 45px !important; 
+}
+
+.chosen-container-multi .chosen-choices .search-field.search-field input[type="text"] {
+	height: 41px;
+}
+
+.chosen-container-multi .chosen-choices .search-choice.search-choice {
+	line-height: 23px;
+}
+
+.chosen-container-multi .chosen-choices .search-choice .search-choice-close.search-choice-close {
+	top:11px;
+}
+
+.chosen-container-multi .chosen-choices.chosen-choices {
+border: solid 2px rgb(220, 228, 236);
+}

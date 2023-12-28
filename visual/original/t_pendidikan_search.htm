@@ -1,0 +1,293 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel t_pendidikan search}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN entry_date_fieldblock}		
+	<div class="container {$fielddispclass_entry_date}" data-fieldname="entry_date">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_entry_date}">
+				{$label t_pendidikan entry_date}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_entry_date}
+			</div>
+			<div class="col-md-4" >
+				{$entry_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$entry_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END entry_date_fieldblock}
+	{BEGIN id_pegawai_fieldblock}		
+	<div class="container {$fielddispclass_id_pegawai}" data-fieldname="id_pegawai">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_id_pegawai}">
+				{$label t_pendidikan id_pegawai}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_id_pegawai}
+			</div>
+			<div class="col-md-4" >
+				{$id_pegawai_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$id_pegawai_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END id_pegawai_fieldblock}
+	{BEGIN nama_pegawai_fieldblock}		
+	<div class="container {$fielddispclass_nama_pegawai}" data-fieldname="nama_pegawai">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_nama_pegawai}">
+				{$label t_pendidikan nama_pegawai}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_nama_pegawai}
+			</div>
+			<div class="col-md-4" >
+				{$nama_pegawai_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$nama_pegawai_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END nama_pegawai_fieldblock}
+	{BEGIN strata_fieldblock}		
+	<div class="container {$fielddispclass_strata}" data-fieldname="strata">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_strata}">
+				{$label t_pendidikan strata}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_strata}
+			</div>
+			<div class="col-md-4" >
+				{$strata_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$strata_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END strata_fieldblock}
+	{BEGIN thn_masuk_fieldblock}		
+	<div class="container {$fielddispclass_thn_masuk}" data-fieldname="thn_masuk">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_thn_masuk}">
+				{$label t_pendidikan thn_masuk}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_thn_masuk}
+			</div>
+			<div class="col-md-4" >
+				{$thn_masuk_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$thn_masuk_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END thn_masuk_fieldblock}
+	{BEGIN thn_lulus_fieldblock}		
+	<div class="container {$fielddispclass_thn_lulus}" data-fieldname="thn_lulus">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_thn_lulus}">
+				{$label t_pendidikan thn_lulus}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_thn_lulus}
+			</div>
+			<div class="col-md-4" >
+				{$thn_lulus_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$thn_lulus_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END thn_lulus_fieldblock}
+	{BEGIN nama_sekolah_fieldblock}		
+	<div class="container {$fielddispclass_nama_sekolah}" data-fieldname="nama_sekolah">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_nama_sekolah}">
+				{$label t_pendidikan nama_sekolah}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_nama_sekolah}
+			</div>
+			<div class="col-md-4" >
+				{$nama_sekolah_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$nama_sekolah_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END nama_sekolah_fieldblock}
+	{BEGIN file_ijazah_fieldblock}		
+	<div class="container {$fielddispclass_file_ijazah}" data-fieldname="file_ijazah">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_file_ijazah}">
+				{$label t_pendidikan file_ijazah}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_file_ijazah}
+			</div>
+			<div class="col-md-4" >
+				{$file_ijazah_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$file_ijazah_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END file_ijazah_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container form-horizontal   "> 
+
+
+
+
+{BEGIN container_bbuttons}
+<div {$bbuttons_chiddenattr} data-pageid="{$pageid}" data-container="bbuttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-10 col-md-offset-2"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Cari</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Tata ulang</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Balik ke daftar</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}>
+  <HEAD>
+    <META http-equiv="X-UA-Compatible" content="IE=Edge">
+    <META name="viewport" content="width=device-width, initial-scale=1.0">
+    <TITLE>
+      {$pagetitle}
+    </TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <LINK href="styles/default.css" rel="stylesheet" type="text/css">
+    {BEGIN rtlCSS}
+      <LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <LINK href="{$stylepath}" rel="stylesheet" type="text/css">
+    {END styleCSSFiles}
+    <META name="GENERATOR" content="MSHTML 11.00.10570.1001">
+  </HEAD>
+  <BODY class="{$stylename} function-add" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <STYLE>
+        {$containerCss}
+      </STYLE>
+      <DIV class="bs-top">
+        {BEGIN container_editpage}
+          <DIV class="container" data-container="editpage" data-pageid="{$pageid}" {$editpage_chiddenattr}>
+            {BEGIN container_header}
+              <DIV class="col-md-9 col-md-offset-3" data-container="header" data-pageid="{$pageid}" {$header_chiddenattr}>
+                {BEGIN addheader}
+                  <H2 data-brick="addheader" data-pageid="{$pageid}" {$addheader_hiddenattr}>
+                    {$pagetitlelabel t_level_pegawai add}
+                  </H2>
+                  {BEGIN printtabheader}
+                    <H4>
+                      {$printtabheader_text}
+                    </H4>
+                  {END printtabheader}
+                {END addheader}
+              </DIV>
+            {END container_header}
+            {BEGIN container_message}
+              <DIV class="col-md-6 col-md-offset-3" data-container="message" data-pageid="{$pageid}" {$message_chiddenattr}>
+                {BEGIN message_block}
+                  <DIV class="alert {$message_class}" role="alert" data-brick="message" data-pageid="{$pageid}" {$message_hiddenattr}>
+                    <H5>
+                      {$message}
+                    </H5>
+                    <DIV>
+                      {BEGIN back_button}
+                        <BUTTON class="btn btn-sm btn-default" {$backbutton_attrs}>
+                          Balik ke daftar
+                        </BUTTON>
+                      {END back_button}
+                      {BEGIN view_page_button}
+                        <BUTTON class="btn btn-sm btn-default" {$view_page_button_attrs}>
+                          Lihat
+                        </BUTTON>
+                      {END view_page_button}
+                      {BEGIN edit_page_button}
+                        <BUTTON class="btn btn-sm btn-default" {$edit_page_button_attrs}>
+                          Edit
+                        </BUTTON>
+                      {END edit_page_button}
+                    </DIV>
+                  </DIV>
+                {END message_block}
+              </DIV>
+            {END container_message}
+          </DIV>
+        {END container_editpage}
+        {BEGIN container_fields}
+          <DIV class="col-md-12" data-container="fields" data-pageid="{$pageid}" {$fields_chiddenattr}>
+            <DIV class="form-horizontal" role="form" data-brick="addfields" data-pageid="{$pageid}" {$addfields_hiddenattr}>
+              {BEGIN id_manager_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_id_manager}" data-signal-error-for="id_manager{$id}" data-fieldname="id_manager">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_id_manager}">
+                      {BEGIN id_manager_label}
+                        {$label t_level_pegawai id_manager}
+                      {END id_manager_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$id_manager_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="id_manager">
+                      <DIV class="text-muted">
+                        {$tooltip t_level_pegawai id_manager}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END id_manager_fieldblock}
+              {BEGIN nama_manager_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_nama_manager}" data-signal-error-for="nama_manager{$id}" data-fieldname="nama_manager">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_nama_manager}">
+                      {BEGIN nama_manager_label}
+                        {$label t_level_pegawai nama_manager}
+                      {END nama_manager_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$nama_manager_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="nama_manager">
+                      <DIV class="text-muted">
+                        {$tooltip t_level_pegawai nama_manager}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END nama_manager_fieldblock}
+								{BEGIN cabang_manager_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_cabang_manager}" data-signal-error-for="cabang_manager{$id}" data-fieldname="cabang_manager">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_cabang_manager}">
+                      {BEGIN cabang_manager_label}
+                        {$label t_level_pegawai cabang_manager}
+                      {END cabang_manager_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$cabang_manager_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="cabang_manager">
+                      <DIV class="text-muted">
+                        {$tooltip t_level_pegawai cabang_manager}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END cabang_manager_fieldblock}
+              {BEGIN id_pegawai_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_id_pegawai}" data-signal-error-for="id_pegawai{$id}" data-fieldname="id_pegawai">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_id_pegawai}">
+                      {BEGIN id_pegawai_label}
+                        {$label t_level_pegawai id_pegawai}
+                      {END id_pegawai_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$id_pegawai_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="id_pegawai">
+                      <DIV class="text-muted">
+                        {$tooltip t_level_pegawai id_pegawai}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END id_pegawai_fieldblock}
+              {BEGIN nama_panggilan_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_nama_panggilan}" data-signal-error-for="nama_panggilan{$id}" data-fieldname="nama_panggilan">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_nama_panggilan}">
+                      {BEGIN nama_panggilan_label}
+                        {$label t_level_pegawai nama_panggilan}
+                      {END nama_panggilan_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$nama_panggilan_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="nama_panggilan">
+                      <DIV class="text-muted">
+                        {$tooltip t_level_pegawai nama_panggilan}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END nama_panggilan_fieldblock}
+              {BEGIN cabang_pegawai_fieldblock}
+                <DIV class="container">
+                  <DIV class="form-group {$fielddispclass_cabang_pegawai}" data-signal-error-for="cabang_pegawai{$id}" data-fieldname="cabang_pegawai">
+                    <LABEL class="col-md-3 control-label" for="{$labelfor_cabang_pegawai}">
+                      {BEGIN cabang_pegawai_label}
+                        {$label t_level_pegawai cabang_pegawai}
+                      {END cabang_pegawai_label}
+                    </LABEL>
+                    <DIV class="col-md-6">
+                      {$cabang_pegawai_editcontrol}
+                    </DIV>
+                    <DIV class="col-md-3 help-block" data-helpfor="cabang_pegawai">
+                      <DIV class="text-muted">
+                        {$tooltip t_level_pegawai cabang_pegawai}
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              {END cabang_pegawai_fieldblock}
+            
+            </DIV>
+          </DIV>
+        {END container_fields}
+        {BEGIN container_bottombuttons}
+          <DIV class="container" data-container="bottombuttons" data-pageid="{$pageid}" {$bottombuttons_chiddenattr}>
+            {BEGIN container_buttons}
+              <DIV class="form-group" data-container="buttons" data-pageid="{$pageid}" {$buttons_chiddenattr}>
+                {BEGIN container_leftbuttons}
+                  <DIV class="col-md-3 col-md-offset-3" data-container="leftbuttons" data-pageid="{$pageid}" {$leftbuttons_chiddenattr}>
+                    {BEGIN addbuttons}
+                      {BEGIN save_button}
+                        <BUTTON class="btn btn-primary" {$savebutton_attrs}>
+                          Simpan
+                        </BUTTON>
+                      {END save_button}
+                      {BEGIN reset_button}
+                        <BUTTON class="btn btn-default" id="resetButton{$id}">
+                          Tata ulang
+                        </BUTTON>
+                      {END reset_button}
+                      {BEGIN back_button}
+                        <BUTTON class="btn btn-default" id="backButton{$id}">
+                          Balik ke daftar
+                        </BUTTON>
+                      {END back_button}
+                      {BEGIN cancel_button}
+                        <A class="btn btn-default" id="cancelButton{$id}" href="#">
+                          Batal
+                        </A>
+                      {END cancel_button}
+                    {END addbuttons}
+                  </DIV>
+                {END container_leftbuttons}
+              </DIV>
+            {END container_buttons}
+          </DIV>
+        {END container_bottombuttons}
+      </DIV>
+      <DIV class="bs-middle">
+        <DIV class="bs-topmiddle">
+        </DIV>
+        <DIV class="bs-left" {$blockattr_left}>
+        </DIV>
+        <DIV class="bs-center">
+        </DIV>
+        <DIV class="bs-right">
+        </DIV>
+      </DIV>
+      <DIV class="bs-bottom">
+      </DIV>
+      {$footer}
+    {END body}
+  </BODY>
+</HTML>

@@ -1,0 +1,308 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-12 "> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel v_approve_lemburhrd view}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+
+	<div class="container">
+					{BEGIN id_pegawai_fieldblock}
+	<div class="{$fielddispclass_id_pegawai} col-md-6 bs-viewcontrolgroup" data-fieldname="id_pegawai">
+		<label class="control-label" for="{$labelfor_id_pegawai}">
+			{$label v_approve_lemburhrd id_pegawai}
+		</label>
+		<div class="" >
+			{$id_pegawai_value}&nbsp;
+		</div>
+	</div>
+{END id_pegawai_fieldblock}
+					{BEGIN tgl_fieldblock}
+	<div class="{$fielddispclass_tgl} col-md-6 bs-viewcontrolgroup" data-fieldname="tgl">
+		<label class="control-label" for="{$labelfor_tgl}">
+			{$label v_approve_lemburhrd tgl}
+		</label>
+		<div class="" >
+			{$tgl_value}&nbsp;
+		</div>
+	</div>
+{END tgl_fieldblock}
+					{BEGIN jam_mulai_fieldblock}
+	<div class="{$fielddispclass_jam_mulai} col-md-6 bs-viewcontrolgroup" data-fieldname="jam_mulai">
+		<label class="control-label" for="{$labelfor_jam_mulai}">
+			{$label v_approve_lemburhrd jam_mulai}
+		</label>
+		<div class="" >
+			{$jam_mulai_value}&nbsp;
+		</div>
+	</div>
+{END jam_mulai_fieldblock}
+					{BEGIN jam_selesai_fieldblock}
+	<div class="{$fielddispclass_jam_selesai} col-md-6 bs-viewcontrolgroup" data-fieldname="jam_selesai">
+		<label class="control-label" for="{$labelfor_jam_selesai}">
+			{$label v_approve_lemburhrd jam_selesai}
+		</label>
+		<div class="" >
+			{$jam_selesai_value}&nbsp;
+		</div>
+	</div>
+{END jam_selesai_fieldblock}
+					{BEGIN ket_fieldblock}
+	<div class="{$fielddispclass_ket} col-md-6 bs-viewcontrolgroup" data-fieldname="ket">
+		<label class="control-label" for="{$labelfor_ket}">
+			{$label v_approve_lemburhrd ket}
+		</label>
+		<div class="" >
+			{$ket_value}&nbsp;
+		</div>
+	</div>
+{END ket_fieldblock}
+					{BEGIN status_fieldblock}
+	<div class="{$fielddispclass_status} col-md-6 bs-viewcontrolgroup" data-fieldname="status">
+		<label class="control-label" for="{$labelfor_status}">
+			{$label v_approve_lemburhrd status}
+		</label>
+		<div class="" >
+			{$status_value}&nbsp;
+		</div>
+	</div>
+{END status_fieldblock}
+					{BEGIN nama_panggilan_fieldblock}
+	<div class="{$fielddispclass_nama_panggilan} col-md-6 bs-viewcontrolgroup" data-fieldname="nama_panggilan">
+		<label class="control-label" for="{$labelfor_nama_panggilan}">
+			{$label v_approve_lemburhrd nama_panggilan}
+		</label>
+		<div class="" >
+			{$nama_panggilan_value}&nbsp;
+		</div>
+	</div>
+{END nama_panggilan_fieldblock}
+					{BEGIN approve_hrd_fieldblock}
+	<div class="{$fielddispclass_approve_hrd} col-md-6 bs-viewcontrolgroup" data-fieldname="approve_hrd">
+		<label class="control-label" for="{$labelfor_approve_hrd}">
+			{$label v_approve_lemburhrd approve_hrd}
+		</label>
+		<div class="" >
+			{$approve_hrd_value}&nbsp;
+		</div>
+	</div>
+{END approve_hrd_fieldblock}
+					{BEGIN status_hrdapprove_fieldblock}
+	<div class="{$fielddispclass_status_hrdapprove} col-md-6 bs-viewcontrolgroup" data-fieldname="status_hrdapprove">
+		<label class="control-label" for="{$labelfor_status_hrdapprove}">
+			{$label v_approve_lemburhrd status_hrdapprove}
+		</label>
+		<div class="" >
+			{$status_hrdapprove_value}&nbsp;
+		</div>
+	</div>
+{END status_hrdapprove_fieldblock}
+					{BEGIN approvedate_hrd_fieldblock}
+	<div class="{$fielddispclass_approvedate_hrd} col-md-6 bs-viewcontrolgroup" data-fieldname="approvedate_hrd">
+		<label class="control-label" for="{$labelfor_approvedate_hrd}">
+			{$label v_approve_lemburhrd approvedate_hrd}
+		</label>
+		<div class="" >
+			{$approvedate_hrd_value}&nbsp;
+		</div>
+	</div>
+{END approvedate_hrd_fieldblock}
+					{BEGIN keterangans_fieldblock}
+	<div class="{$fielddispclass_keterangans} col-md-6 bs-viewcontrolgroup" data-fieldname="keterangans">
+		<label class="control-label" for="{$labelfor_keterangans}">
+			{$label v_approve_lemburhrd keterangans}
+		</label>
+		<div class="" >
+			{$keterangans_value}&nbsp;
+		</div>
+	</div>
+{END keterangans_fieldblock}
+					{BEGIN approve_spv_fieldblock}
+	<div class="{$fielddispclass_approve_spv} col-md-6 bs-viewcontrolgroup" data-fieldname="approve_spv">
+		<label class="control-label" for="{$labelfor_approve_spv}">
+			{$label v_approve_lemburhrd approve_spv}
+		</label>
+		<div class="" >
+			{$approve_spv_value}&nbsp;
+		</div>
+	</div>
+{END approve_spv_fieldblock}
+					{BEGIN approve_spv_date_fieldblock}
+	<div class="{$fielddispclass_approve_spv_date} col-md-6 bs-viewcontrolgroup" data-fieldname="approve_spv_date">
+		<label class="control-label" for="{$labelfor_approve_spv_date}">
+			{$label v_approve_lemburhrd approve_spv_date}
+		</label>
+		<div class="" >
+			{$approve_spv_date_value}&nbsp;
+		</div>
+	</div>
+{END approve_spv_date_fieldblock}
+	</div>
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-6 "> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>Balik ke daftar</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>Tutup jendela</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="   col-md-4 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>Edit</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

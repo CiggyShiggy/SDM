@@ -1,0 +1,746 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<BODY class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}<style>
+{$containerCss}
+</style>
+<DIV class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<DIV class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}<DIV {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class="bs-sidebarlogo"> 
+
+{BEGIN logo_block}<A href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand">{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}<DIV {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class="navbar-default clearfix"> 
+
+{BEGIN collapse_block}<BUTTON {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<SPAN class="sr-only">Toggle navigation</span>	
+	<SPAN class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<DIV {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false">												   
+{BEGIN menu_block}{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+{BEGIN container_left}<DIV {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class="sidebar-container"> 
+
+{BEGIN searchPanel}<DIV {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	
+	<DIV class="panel-heading">
+		<DIV class="btn-group" id="addSearchFieldButton{$id}">
+			<BUTTON id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in
+			<SPAN class="caret"></span>
+			</button>
+		</div>
+
+		
+		<DIV class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<BUTTON type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<SPAN class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<UL class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
+				<LI role="separator" class="divider"></li>
+				<LI class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><SPAN class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<LI class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><SPAN class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<LI role="separator" class="divider"></li>
+				<li><A class="close-button"><SPAN class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<DIV class="panel-body controlsBlock" {$bottomSearchButt_attrs}>
+
+
+		
+		{BEGIN searchCtrlBlock}<DIV class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<SPAN class="rnr-searchtype">{$searchtype}</span>
+				<SPAN class="rnr-searchcontrol">{$searchcontrol}</span>
+				<SPAN class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<DIV class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<BUTTON class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Cari</button>
+		<BUTTON class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>
+		Perlihatkan semua
+		</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_left}
+
+
+	</div>
+</div>	
+<DIV class="bs-wrapper">
+	<DIV class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<NAV {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}<DIV {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class="navbar-form navbar-left"> 
+
+{BEGIN breadcrumbs}<OL class="breadcrumb">
+<li ><a href="{$home_link}"><SPAN class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}<LI class="{$crumb_item_class}">
+{BEGIN crumb_title_link}<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<DIV {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false">												   
+
+
+
+{BEGIN container_more}<DIV {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class="navbar-right navbar-form"> 
+
+{BEGIN more_list}<DIV {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<BUTTON type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<SPAN class="glyphicon glyphicon-cog"></span>
+		<SPAN class="caret"></span>
+	</button>
+	<UL class="dropdown-menu">
+		
+				{BEGIN exportselected_link}<LI class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >Pilihan Ekspor</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}<LI class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Hapus dipilih</a></li>
+		{END deleteselected_link}
+		
+				<LI role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}<li><A href="v_cabang1_search.php" {$advsearchlink_attrs}>Pencarian canggih</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<LI role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}<li><A target="_blank" href="v_cabang1_export.php" {$exportlink_attrs}>Ekspor hasil</a></li>
+		{END export_link}
+
+		
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}<SPAN {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}<BUTTON class="btn btn-info" type="button" {$guestloginlink_attrs}>Login</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message}<SPAN class="dropdown">
+			<BUTTON class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<SPAN class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<UL class="dropdown-menu">
+		{BEGIN logoutbutton}<li><a href="#" {$logoutlink_attrs}>Log out</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}<li><a href="admin_rights_list.php" {$adminarealink_attrs}>Admin Area</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}<li><a href="#" {$changepwdlink_attrs}>Rubah password</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}<DIV {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class="navbar-right navbar-form"> 
+
+{BEGIN searchform_block}<SPAN {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+ <DIV class="input-group">
+{BEGIN searchform_text}<INPUT type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<SPAN class="input-group-btn">
+	{BEGIN searchform_showall}<BUTTON class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Perlihatkan semua">
+			<SPAN class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}<BUTTON {$searchbutton_attrs} class="btn btn-primary">
+		<SPAN class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<DIV class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		<P> <BR></P> 
+<P><BR></P>
+<P><BR></P>
+{$header}
+		<DIV class="bs-sidebar-screenbound">
+			
+
+{BEGIN container_masterinfo}<DIV {$masterinfo_chiddenattr} data-pageid="{$pageid}" data-container="masterinfo" class=" "> 
+
+{BEGIN mastertable_block}<DIV class="panel panel-info table-panel">
+	<DIV class="panel-heading">
+		{$master_heading}
+	</div>
+	<DIV class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_masterinfo}
+
+
+
+{BEGIN container_gridcontrols}<DIV {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class="bs-navcontrolled bs-hidden-xs"> 
+
+
+
+
+{BEGIN container_add_delete}<DIV {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class="bottom-margin col-md-6"> 
+
+{BEGIN newrecord_controls_block}{BEGIN add_link}<A {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>Tambah baru</a>
+	{END add_link}
+
+	
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}<BUTTON type="button" class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>Hapus</button>
+	{END deleteselected_link}
+		</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}<DIV {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class="bottom-margin text-right col-md-6"> 
+
+{BEGIN details_found}<SPAN {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}<SPAN {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<BUTTON class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Print-friendly page">
+		<SPAN class="glyphicon glyphicon-print"></span>
+		<SPAN class="caret"></span>
+    </button>
+	<UL class="dropdown-menu pull-right">
+		<li>
+			<DIV class="container-fluid" id="print_friendly_scope{$id}">
+				<DIV class="row">
+					<DIV class="col-md-4">Scope:</div>
+										{BEGIN print_friendly_all}<DIV class="col-md-8">
+						<label for="printAll{$id}">
+							<INPUT type="radio" id="printAll{$id}" data-href="v_cabang1_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Print all pages
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<DIV class="row">
+					<DIV class="col-md-4">&nbsp;</div>
+					<DIV class="col-md-8">
+						<label for="printPage{$id}">
+							<INPUT type="radio" id="printPage{$id}" data-href="v_cabang1_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Print this page
+						</label>
+					</div>
+				</div>
+								<DIV class="row">
+					<DIV class="col-md-4">&nbsp;</div>
+					<DIV class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							Print selected
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<LI class="divider" role="separator"></li>
+
+				<li>			
+		{BEGIN print_details}<DIV class="rnr-printdetails">
+				<label for="printDetailsToggler{$id}">
+					<input type="checkbox" id="printDetailsToggler{$id}">
+					Print details
+				</label>
+				<DIV class="rnr-printdetailstables" id="printdetailstables{$id}" style="display:none;">
+					{BEGIN print_details_m_pegawai7}<DIV class="rnr-printdetialstable">
+								<label for="printDetailsm_pegawai7{$id}">
+									<input type="checkbox" value="m_pegawai7" id="printDetailsm_pegawai7{$id}" checked>
+									M Pegawai7
+								</label>
+							</div>
+					{END print_details_m_pegawai7}
+				</div>
+			</div>
+		{END print_details}
+		</li>
+		<LI class="divider" role="separator"></li>
+
+				<li>	
+			<DIV class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											Catatan per halaman:
+				</label>
+				<INPUT type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<LI class="divider" role="separator"></li>
+		<LI class="rnr-printbutton">				
+			<BUTTON type="button" class="btn btn-primary" id="print_friendly_button{$id}">Print</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+</div>
+{END container_gridcontrols}
+
+
+		</div>
+		<div></div>
+		<DIV class="bs-sidebar-screenbound bs-minwidth">
+			
+
+{BEGIN container_tabs}<DIV {$tabs_chiddenattr} data-pageid="{$pageid}" data-container="tabs" class=" "> 
+
+{BEGIN grid_tabs}<div {$bsgrid_tabs_hiddenattr} data-pageid="{$pageid}" data-brick="bsgrid_tabs">
+<UL class="nav nav-tabs">
+{$grid_tabs_content}
+</ul>
+</div>
+{END grid_tabs}
+
+
+
+</div>
+{END container_tabs}
+
+
+
+{BEGIN container_message}<DIV {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class=" "> 
+
+{BEGIN message_block}<DIV {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+{BEGIN container_center}<DIV {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class=" "> 
+
+
+
+
+{BEGIN container_grid}<DIV {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid"> 
+
+{BEGIN grid_block}<style>
+	.bs-gridcell[data-field=id]:before {
+		content: "{$label m_cabang id}";
+	}
+	.bs-gridcell[data-field=cabang]:before {
+		content: "{$label m_cabang cabang}";
+	}
+	.bs-gridcell[data-field=alamat]:before {
+		content: "{$label m_cabang alamat}";
+	}
+	.bs-gridcell[data-field=telp]:before {
+		content: "{$label m_cabang telp}";
+	}
+	.bs-gridcell[data-field=keterangan]:before {
+		content: "{$label m_cabang keterangan}";
+	}
+	.bs-gridcell[data-field=id_kacab]:before {
+		content: "{$label m_cabang id_kacab}";
+	}
+	.bs-gridcell[data-field=kode]:before {
+		content: "{$label m_cabang kode}";
+	}
+	.bs-gridcell[data-field=isaktif]:before {
+		content: "{$label m_cabang isaktif}";
+	}
+</style>
+<TABLE {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0">
+	<thead>
+										{BEGIN grid_header}<TR class="rnr-toprow {$gridHeader_class}">
+									{BEGIN record_header}{BEGIN listIcons_column}<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}<TH><input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		{BEGIN m_cabang_dtable_column}<th >&nbsp;</th>
+									{END m_cabang_dtable_column}
+									
+									{BEGIN id_kacab_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$id_kacab_class}" data-field=id_kacab>
+									{BEGIN id_kacab_fieldheader}<span {$id_kacab_orderlinkattrs}>
+											{$label v_cabang1 id_kacab}
+										</span>
+									{END id_kacab_fieldheader}
+									</th>
+									{END id_kacab_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN kode_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$kode_class}" data-field=kode>
+									{BEGIN kode_fieldheader}<span {$kode_orderlinkattrs}>
+											{$label v_cabang1 kode}
+										</span>
+									{END kode_fieldheader}
+									</th>
+									{END kode_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN id_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$id_class}" data-field=id>
+									{BEGIN id_fieldheader}<span {$id_orderlinkattrs}>
+											{$label v_cabang1 id}
+										</span>
+									{END id_fieldheader}
+									</th>
+									{END id_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN cabang_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$cabang_class}" data-field=cabang>
+									{BEGIN cabang_fieldheader}<span {$cabang_orderlinkattrs}>
+											{$label v_cabang1 cabang}
+										</span>
+									{END cabang_fieldheader}
+									</th>
+									{END cabang_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN alamat_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$alamat_class}" data-field=alamat>
+									{BEGIN alamat_fieldheader}<span {$alamat_orderlinkattrs}>
+											{$label v_cabang1 alamat}
+										</span>
+									{END alamat_fieldheader}
+									</th>
+									{END alamat_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN telp_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$telp_class}" data-field=telp>
+									{BEGIN telp_fieldheader}<span {$telp_orderlinkattrs}>
+											{$label v_cabang1 telp}
+										</span>
+									{END telp_fieldheader}
+									</th>
+									{END telp_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN keterangan_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$keterangan_class}" data-field=keterangan>
+									{BEGIN keterangan_fieldheader}<span {$keterangan_orderlinkattrs}>
+											{$label v_cabang1 keterangan}
+										</span>
+									{END keterangan_fieldheader}
+									</th>
+									{END keterangan_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN isaktif_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$isaktif_class}" data-field=isaktif>
+									{BEGIN isaktif_fieldheader}<span {$isaktif_orderlinkattrs}>
+											{$label v_cabang1 isaktif}
+										</span>
+									{END isaktif_fieldheader}
+									</th>
+									{END isaktif_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}<TH class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}<TR class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}{BEGIN listIcons_column}<TD class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}{BEGIN edit_link}<A class="glyphicon glyphicon-pencil" {$editlink_attrs} title="Edit"></a>
+	{END edit_link}
+	{END edit_column}
+
+		
+	<span data-hidden {$ieditbuttonsholder_attrs}></span>
+
+	
+		{BEGIN view_column}{BEGIN view_link}<A class="glyphicon glyphicon-search" {$viewlink_attrs} title="Lihat"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}<TD iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+		{BEGIN m_cabang_dtable_column}<TD class="rnr-nowrap bs-griddetails" {$rowstyle} {$recordattrs}>
+	
+			{BEGIN dtables_link}<a {$dtables_link_attrs}  title="Show details">
+				<SPAN class="badge m_pegawai7_badge" {$m_pegawai7_childnumber_attr}>
+					<SPAN class="glyphicon glyphicon-th-list"></span> 
+					<SPAN class="{$m_pegawai7_cntspan_class}">{$m_pegawai7_childnumber}</span>
+				</span></a>
+		{END dtables_link}
+	
+	
+	</td>
+	{END m_cabang_dtable_column}
+
+
+	{BEGIN id_kacab_fieldcolumn}<TD class="bs-gridcell {$id_kacab_class}" data-field=id_kacab {$rowstyle} {$recordattrs}>
+		{$id_kacab_value}
+	</td>
+{END id_kacab_fieldcolumn}
+
+
+	{BEGIN kode_fieldcolumn}<TD class="bs-gridcell {$kode_class}" data-field=kode {$rowstyle} {$recordattrs}>
+		{$kode_value}
+	</td>
+{END kode_fieldcolumn}
+
+
+	{BEGIN id_fieldcolumn}<TD class="bs-gridcell {$id_class}" data-field=id {$rowstyle} {$recordattrs}>
+		{$id_value}
+	</td>
+{END id_fieldcolumn}
+
+
+	{BEGIN cabang_fieldcolumn}<TD class="bs-gridcell {$cabang_class}" data-field=cabang {$rowstyle} {$recordattrs}>
+		{$cabang_value}
+	</td>
+{END cabang_fieldcolumn}
+
+
+	{BEGIN alamat_fieldcolumn}<TD class="bs-gridcell {$alamat_class}" data-field=alamat {$rowstyle} {$recordattrs}>
+		{$alamat_value}
+	</td>
+{END alamat_fieldcolumn}
+
+
+	{BEGIN telp_fieldcolumn}<TD class="bs-gridcell {$telp_class}" data-field=telp {$rowstyle} {$recordattrs}>
+		{$telp_value}
+	</td>
+{END telp_fieldcolumn}
+
+
+	{BEGIN keterangan_fieldcolumn}<TD class="bs-gridcell {$keterangan_class}" data-field=keterangan {$rowstyle} {$recordattrs}>
+		{$keterangan_value}
+	</td>
+{END keterangan_fieldcolumn}
+
+
+	{BEGIN isaktif_fieldcolumn}<TD class="bs-gridcell {$isaktif_class}" data-field=isaktif {$rowstyle} {$recordattrs}>
+		{$isaktif_value}
+	</td>
+{END isaktif_fieldcolumn}
+
+	{BEGIN endrecord_block}<TD class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}<DIV {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="text-center col-md-12"> 
+
+{BEGIN pagination_block}<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>

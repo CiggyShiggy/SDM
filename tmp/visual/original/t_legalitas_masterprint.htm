@@ -1,0 +1,49 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel t_legalitas masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$entry_date_class}">{$label t_legalitas entry_date}</th>
+			<th class="{$id_pegawai_class}">{$label t_legalitas id_pegawai}</th>
+			<th class="{$nama_pegawai_class}">{$label t_legalitas nama_pegawai}</th>
+			<th class="{$id_legalitas_class}">{$label t_legalitas id_legalitas}</th>
+			<th class="{$jenis_legalitas_class}">{$label t_legalitas jenis_legalitas}</th>
+			<th class="{$file_class}">{$label t_legalitas file}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$entry_date_class}">{$entry_date_mastervalue}</td>
+			<td class="{$id_pegawai_class}">{$id_pegawai_mastervalue}</td>
+			<td class="{$nama_pegawai_class}">{$nama_pegawai_mastervalue}</td>
+			<td class="{$id_legalitas_class}">{$id_legalitas_mastervalue}</td>
+			<td class="{$jenis_legalitas_class}">{$jenis_legalitas_mastervalue}</td>
+			<td class="{$file_class}">{$file_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

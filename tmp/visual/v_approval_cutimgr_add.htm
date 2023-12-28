@@ -1,0 +1,279 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<BODY class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}<DIV {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container"> 
+
+
+
+
+{BEGIN container_header}<DIV {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel v_approval_cutimgr add}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}<DIV {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}<DIV {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}<BUTTON class="btn btn-sm btn-default" {$backbutton_attrs}>Balik ke daftar</button>
+{END back_button}
+{BEGIN view_page_button}<BUTTON class="btn btn-sm btn-default" {$view_page_button_attrs}>Lihat</button>
+{END view_page_button}
+{BEGIN edit_page_button}<BUTTON class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}<DIV {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="col-md-12"> 
+
+
+<DIV {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN id_pegawai_fieldblock}<DIV class=container>
+<DIV class="form-group {$fielddispclass_id_pegawai}" data-fieldname="id_pegawai" data-signal-error-for="id_pegawai{$id}">
+	<LABEL class="col-md-3 control-label" for="{$labelfor_id_pegawai}">
+		{BEGIN id_pegawai_label}{$label v_approval_cutimgr id_pegawai}{END id_pegawai_label}
+	</label>
+	<DIV class="col-md-6">
+		{$id_pegawai_editcontrol}
+	</div>
+	<DIV class="col-md-3 help-block" data-helpfor="id_pegawai">
+		<DIV class="text-muted">
+		{$tooltip v_approval_cutimgr id_pegawai}
+		</div>
+	</div>
+</div>
+</div>
+{END id_pegawai_fieldblock}
+
+			{BEGIN tgl_fieldblock}<DIV class=container>
+<DIV class="form-group {$fielddispclass_tgl}" data-fieldname="tgl" data-signal-error-for="tgl{$id}">
+	<LABEL class="col-md-3 control-label" for="{$labelfor_tgl}">
+		{BEGIN tgl_label}{$label v_approval_cutimgr tgl}{END tgl_label}
+	</label>
+	<DIV class="col-md-6">
+		{$tgl_editcontrol}
+	</div>
+	<DIV class="col-md-3 help-block" data-helpfor="tgl">
+		<DIV class="text-muted">
+		{$tooltip v_approval_cutimgr tgl}
+		</div>
+	</div>
+</div>
+</div>
+{END tgl_fieldblock}
+
+			{BEGIN nama_panggilan_fieldblock}<DIV class=container>
+<DIV class="form-group {$fielddispclass_nama_panggilan}" data-fieldname="nama_panggilan" data-signal-error-for="nama_panggilan{$id}">
+	<LABEL class="col-md-3 control-label" for="{$labelfor_nama_panggilan}">
+		{BEGIN nama_panggilan_label}{$label v_approval_cutimgr nama_panggilan}{END nama_panggilan_label}
+	</label>
+	<DIV class="col-md-6">
+		{$nama_panggilan_editcontrol}
+	</div>
+	<DIV class="col-md-3 help-block" data-helpfor="nama_panggilan">
+		<DIV class="text-muted">
+		{$tooltip v_approval_cutimgr nama_panggilan}
+		</div>
+	</div>
+</div>
+</div>
+{END nama_panggilan_fieldblock}
+              {BEGIN tgl_mulai_fieldblock}<DIV class=container>
+<DIV class="form-group {$fielddispclass_tgl_mulai}" data-fieldname="tgl_mulai" data-signal-error-for="tgl_mulai{$id}">
+	<LABEL class="col-md-3 control-label" for="{$labelfor_tgl_mulai}">
+		{BEGIN tgl_mulai_label}{$label v_approval_cutimgr tgl_mulai}{END tgl_mulai_label}
+	</label>
+	<DIV class="col-md-6">
+		{$tgl_mulai_editcontrol}
+	</div>
+	<DIV class="col-md-3 help-block" data-helpfor="tgl_mulai">
+		<DIV class="text-muted">
+		{$tooltip v_approval_cutimgr tgl_mulai}
+		</div>
+	</div>
+</div>
+</div>
+{END tgl_mulai_fieldblock}
+
+			{BEGIN tgl_selesai_fieldblock}<DIV class=container>
+<DIV class="form-group {$fielddispclass_tgl_selesai}" data-fieldname="tgl_selesai" data-signal-error-for="tgl_selesai{$id}">
+	<LABEL class="col-md-3 control-label" for="{$labelfor_tgl_selesai}">
+		{BEGIN tgl_selesai_label}{$label v_approval_cutimgr tgl_selesai}{END tgl_selesai_label}
+	</label>
+	<DIV class="col-md-6">
+		{$tgl_selesai_editcontrol}
+	</div>
+	<DIV class="col-md-3 help-block" data-helpfor="tgl_selesai">
+		<DIV class="text-muted">
+		{$tooltip v_approval_cutimgr tgl_selesai}
+		</div>
+	</div>
+</div>
+</div>
+{END tgl_selesai_fieldblock}
+
+			{BEGIN alasan_fieldblock}<DIV class=container>
+<DIV class="form-group {$fielddispclass_alasan}" data-fieldname="alasan" data-signal-error-for="alasan{$id}">
+	<LABEL class="col-md-3 control-label" for="{$labelfor_alasan}">
+		{BEGIN alasan_label}{$label v_approval_cutimgr alasan}{END alasan_label}
+	</label>
+	<DIV class="col-md-6">
+		{$alasan_editcontrol}
+	</div>
+	<DIV class="col-md-3 help-block" data-helpfor="alasan">
+		<DIV class="text-muted">
+		{$tooltip v_approval_cutimgr alasan}
+		</div>
+	</div>
+</div>
+</div>
+{END alasan_fieldblock}
+
+			{BEGIN status_fieldblock}<DIV class=container>
+<DIV class="form-group {$fielddispclass_status}" data-fieldname="status" data-signal-error-for="status{$id}">
+	<LABEL class="col-md-3 control-label" for="{$labelfor_status}">
+		{BEGIN status_label}{$label v_approval_cutimgr status}{END status_label}
+	</label>
+	<DIV class="col-md-6">
+		{$status_editcontrol}
+	</div>
+	<DIV class="col-md-3 help-block" data-helpfor="status">
+		<DIV class="text-muted">
+		{$tooltip v_approval_cutimgr status}
+		</div>
+	</div>
+</div>
+</div>
+{END status_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}<DIV {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container"> 
+
+
+
+
+{BEGIN container_buttons}<DIV {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class="form-group"> 
+
+
+
+
+{BEGIN container_leftbuttons}<DIV {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}{BEGIN save_button}<BUTTON class="btn btn-primary" {$savebutton_attrs}>Simpan</button>
+	{END save_button}
+	{BEGIN reset_button}<BUTTON class="btn btn-default" id="resetButton{$id}">Tata ulang</button>
+	{END reset_button}
+	{BEGIN back_button}<BUTTON class="btn btn-default" id="backButton{$id}">Balik ke daftar</button>
+	{END back_button}
+	{BEGIN cancel_button}<A href="#" class="btn btn-default" id="cancelButton{$id}">Batal</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<DIV class="bs-middle">
+			<DIV class="bs-topmiddle">
+				
+			</div>
+			<DIV class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<DIV class="bs-center">
+				
+			</div>
+			<DIV class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

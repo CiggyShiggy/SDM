@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD> 
+<META http-equiv="X-UA-Compatible" content="IE=Edge"> 
+<META name="viewport" content="width=device-width, initial-scale=1.0"> 
+<TITLE>{$pagetitle}</TITLE> 
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<LINK href="styles/default.css" rel="stylesheet" type="text/css"> {BEGIN rtlCSS}<LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">{END rtlCSS} {BEGIN styleCSSFiles}<LINK href="{$stylepath}" rel="stylesheet" type="text/css">{END styleCSSFiles} 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001">      
+</HEAD> 
+<BODY class="{$stylename} function-import" {$bodyattrs}>{BEGIN body}
+
+{$header} 
+<STYLE>
+			{$containerCss}
+		</STYLE>
+ 
+<DIV class="bs-top">
+{BEGIN container_page}<DIV class="bs-standalone-page" data-container="page" data-pageid="{$pageid}" {$page_chiddenattr}>
+{BEGIN container_panel}<DIV class="bs-pagepanel bs-bigpanel panel panel-primary" data-container="panel" data-pageid="{$pageid}" {$panel_chiddenattr}>
+{BEGIN container_header}<DIV class="panel-heading" data-container="header" data-pageid="{$pageid}" {$header_chiddenattr}>
+<H3 class="panel-title" data-brick="importheader" data-pageid="{$pageid}" {$importheader_hiddenattr}>Import</H3></DIV>
+{END container_header}{BEGIN container_body}<DIV class="panel-body" data-container="body" data-pageid="{$pageid}" {$body_chiddenattr}>
+{BEGIN container_message}<DIV class="col-md-12" data-container="message" data-pageid="{$pageid}" {$message_chiddenattr}>
+<DIV data-brick="errormessage" data-pageid="{$pageid}" {$errormessage_hiddenattr}>
+{$error_message}</DIV></DIV>
+{END container_message}{BEGIN container_import}<DIV class="col-md-12" data-container="import" data-pageid="{$pageid}" {$import_chiddenattr}>
+<DIV class="form-group" data-brick="importheader_text" data-pageid="{$pageid}" {$importheader_text_hiddenattr}>Drag dan drop&nbsp;file 
+ (.csv) yang dipisahkan koma&nbsp;atau file&nbsp;Excel (.xlsx) atau pilih dari 
+ opsi di bawah. </DIV>
+<DIV class="form-group" data-brick="importfields" data-pageid="{$pageid}" {$importfields_hiddenattr}>
+<DIV id="importUploadFallback{$id}" style="display: none;">
+<TABLE class="fieldGrid">
+  <TBODY>
+  <TR>
+    <TD>	Select file with data. </TD>
+    <TD><INPUT name="importFile{$id}" id="importFile{$id}" type="File"></TD></TR></TBODY></TABLE></DIV>
+<DIV class="rnr-import-settings"><A class="btn btn-default" id="uploadImportFile{$id}" href="#"> Browse... </A> </DIV>
+<DIV class="rnr-dragndrop-area" id="importDropzone{$id}" style="display: none;">
+<DIV class="rnr-dragtext"> Drag files here </DIV></DIV>
+<DIV class="rnr-import-settings"><A class="btn btn-default" id="switchToTextInsertion{$id}" href="#"> Copy and paste text </A> 
+</DIV></DIV>
+<DIV class="form-group" id="copyAndPasteText{$id}" data-brick="import_rawtext_control" data-pageid="{$pageid}" {$import_rawtext_control_hiddenattr}>
+<DIV>&nbsp;Copy dan Paste text anda di 
+sini:</DIV><TEXTAREA class="rnr-import-textarea" id="importText{$id}"></TEXTAREA> 
+</DIV>
+<DIV class="form-group" data-brick="import_preview" data-pageid="{$pageid}" {$import_preview_hiddenattr}>
+<DIV class="rnr-import-settings form-group" id="importSettings{$id}">
+<DIV class="rnr-is-control checkbox"><LABEL><INPUT name="columnsInFirstLine" class="rnr-checkbox" id="columnsInFirstLine{$id}" type="checkbox" checked="checked"> Nama Kolom pada barisan  pertama</LABEL> 
+</DIV>
+<UL class="rnr-is-control list-inline" id="delimiterSettings{$id}" style="display: none;">
+  <LI class="radio"><LABEL><INPUT name="importDelimiter" class="importDelimiters" type="radio" value=",">Comma</LABEL></LI>
+  <LI class="radio"><LABEL><INPUT name="importDelimiter" class="importDelimiters" type="radio" value="&#9;">Tab</LABEL></LI>
+  <LI class="radio"><LABEL><INPUT name="importDelimiter" class="importDelimiters" type="radio" value="other">Other</LABEL> <INPUT id="customDelimiter{$id}" type="text" value=";"></LI></UL>
+<DIV class="rnr-is-control" id="dateFormatSettings{$id}" style="display: none;"><LABEL>Date format:</LABEL> <INPUT id="importDateFormat{$id}" type="text"> 
+</DIV></DIV>
+<DIV class="rnr-import-head-preview" id="importGridHead{$id}"></DIV>
+<DIV class="rnr-import-body-preview form-group" id="importGridBody{$id}">
+<TABLE id="importPreviewBodyTable{$id}"></TABLE></DIV>
+<DIV class="alert alert-danger" id="importErrorMessage{$id}" style="display: none;"></DIV></DIV>
+<DIV class="rnr-import-progress form-group" id="importProgress{$id}" data-brick="import_process" data-pageid="{$pageid}" {$import_process_hiddenattr}></DIV>
+<DIV class="rnr-import-report form-group" id="reportText{$id}" data-brick="import_results" data-pageid="{$pageid}" {$import_results_hiddenattr}></DIV>
+<DIV data-brick="importbuttons" data-pageid="{$pageid}" {$importbuttons_hiddenattr}>
+<DIV class="rnr-buttons-right"><A class="btn btn-default" id="backToList{$id}" href="#">Balik ke daftar</A> <A class="btn btn-default" id="newImport{$id}" style="display: none;" href="#">New import</A> </DIV>
+<DIV class="rnr-buttons-left"><A class="btn btn-primary disabled" id="continueTextImport{$id}" style="display: none;" href="#">
+Continue </A>	<A class="btn btn-primary" id="importButton{$id}" style="display: none;" href="#">Import Data</A>	<A class="btn btn-default" id="backTo{$id}" style="display: none;" href="#">Kembali</A> <A class="btn btn-default" id="saveReport{$id}" style="display: none;" href="#">Save  
+Report</A> <A class="btn btn-default errorReportButtons{$id}" id="saveUnprocessedData{$id}" style="display: none;" href="#">Download unprocessed data</A> <A class="btn btn-default errorReportButtons{$id}" id="saveErrorReport{$id}" style="display: none;" href="#">Download error log</A> 
+</DIV></DIV></DIV>{END container_import}</DIV>{END container_body}</DIV>{END container_panel}</DIV>{END container_page}</DIV>
+<DIV class="bs-middle">
+<DIV class="bs-topmiddle"></DIV>
+<DIV class="bs-left" {$blockattr_left}></DIV> 
+<DIV class="bs-center"></DIV> 
+<DIV class="bs-right"></DIV></DIV>
+<DIV class="bs-bottom"></DIV>
+{$footer}{END body} </BODY></HTML>

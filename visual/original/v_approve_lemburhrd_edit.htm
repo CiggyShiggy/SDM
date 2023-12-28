@@ -1,0 +1,522 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel v_approve_lemburhrd edit}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Balik ke daftar</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Lihat</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+			{BEGIN id_pegawai_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_id_pegawai}" data-fieldname="id_pegawai" data-signal-error-for="id_pegawai{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_id_pegawai}">
+		{BEGIN id_pegawai_label}{$label v_approve_lemburhrd id_pegawai}{END id_pegawai_label}
+	</label>
+	<div class="col-md-6" >
+		{$id_pegawai_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="id_pegawai">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd id_pegawai}
+		</div>
+	</div>
+</div>
+</div>
+{END id_pegawai_fieldblock}
+
+			{BEGIN tgl_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_tgl}" data-fieldname="tgl" data-signal-error-for="tgl{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_tgl}">
+		{BEGIN tgl_label}{$label v_approve_lemburhrd tgl}{END tgl_label}
+	</label>
+	<div class="col-md-6" >
+		{$tgl_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="tgl">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd tgl}
+		</div>
+	</div>
+</div>
+</div>
+{END tgl_fieldblock}
+
+			{BEGIN jam_mulai_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_jam_mulai}" data-fieldname="jam_mulai" data-signal-error-for="jam_mulai{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_jam_mulai}">
+		{BEGIN jam_mulai_label}{$label v_approve_lemburhrd jam_mulai}{END jam_mulai_label}
+	</label>
+	<div class="col-md-6" >
+		{$jam_mulai_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="jam_mulai">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd jam_mulai}
+		</div>
+	</div>
+</div>
+</div>
+{END jam_mulai_fieldblock}
+
+			{BEGIN jam_selesai_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_jam_selesai}" data-fieldname="jam_selesai" data-signal-error-for="jam_selesai{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_jam_selesai}">
+		{BEGIN jam_selesai_label}{$label v_approve_lemburhrd jam_selesai}{END jam_selesai_label}
+	</label>
+	<div class="col-md-6" >
+		{$jam_selesai_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="jam_selesai">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd jam_selesai}
+		</div>
+	</div>
+</div>
+</div>
+{END jam_selesai_fieldblock}
+
+			{BEGIN ket_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ket}" data-fieldname="ket" data-signal-error-for="ket{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ket}">
+		{BEGIN ket_label}{$label v_approve_lemburhrd ket}{END ket_label}
+	</label>
+	<div class="col-md-6" >
+		{$ket_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ket">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd ket}
+		</div>
+	</div>
+</div>
+</div>
+{END ket_fieldblock}
+
+			{BEGIN status_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_status}" data-fieldname="status" data-signal-error-for="status{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_status}">
+		{BEGIN status_label}{$label v_approve_lemburhrd status}{END status_label}
+	</label>
+	<div class="col-md-6" >
+		{$status_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="status">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd status}
+		</div>
+	</div>
+</div>
+</div>
+{END status_fieldblock}
+
+			{BEGIN catatan_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_catatan}" data-fieldname="catatan" data-signal-error-for="catatan{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_catatan}">
+		{BEGIN catatan_label}{$label v_approve_lemburhrd catatan}{END catatan_label}
+	</label>
+	<div class="col-md-6" >
+		{$catatan_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="catatan">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd catatan}
+		</div>
+	</div>
+</div>
+</div>
+{END catatan_fieldblock}
+
+			{BEGIN jam_mulai_real_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_jam_mulai_real}" data-fieldname="jam_mulai_real" data-signal-error-for="jam_mulai_real{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_jam_mulai_real}">
+		{BEGIN jam_mulai_real_label}{$label v_approve_lemburhrd jam_mulai_real}{END jam_mulai_real_label}
+	</label>
+	<div class="col-md-6" >
+		{$jam_mulai_real_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="jam_mulai_real">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd jam_mulai_real}
+		</div>
+	</div>
+</div>
+</div>
+{END jam_mulai_real_fieldblock}
+
+			{BEGIN jam_akhir_real_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_jam_akhir_real}" data-fieldname="jam_akhir_real" data-signal-error-for="jam_akhir_real{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_jam_akhir_real}">
+		{BEGIN jam_akhir_real_label}{$label v_approve_lemburhrd jam_akhir_real}{END jam_akhir_real_label}
+	</label>
+	<div class="col-md-6" >
+		{$jam_akhir_real_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="jam_akhir_real">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd jam_akhir_real}
+		</div>
+	</div>
+</div>
+</div>
+{END jam_akhir_real_fieldblock}
+
+			{BEGIN nama_panggilan_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_nama_panggilan}" data-fieldname="nama_panggilan" data-signal-error-for="nama_panggilan{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_nama_panggilan}">
+		{BEGIN nama_panggilan_label}{$label v_approve_lemburhrd nama_panggilan}{END nama_panggilan_label}
+	</label>
+	<div class="col-md-6" >
+		{$nama_panggilan_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="nama_panggilan">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd nama_panggilan}
+		</div>
+	</div>
+</div>
+</div>
+{END nama_panggilan_fieldblock}
+
+			{BEGIN approve_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_approve_date}" data-fieldname="approve_date" data-signal-error-for="approve_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_approve_date}">
+		{BEGIN approve_date_label}{$label v_approve_lemburhrd approve_date}{END approve_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$approve_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="approve_date">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd approve_date}
+		</div>
+	</div>
+</div>
+</div>
+{END approve_date_fieldblock}
+
+			{BEGIN approve_user_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_approve_user}" data-fieldname="approve_user" data-signal-error-for="approve_user{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_approve_user}">
+		{BEGIN approve_user_label}{$label v_approve_lemburhrd approve_user}{END approve_user_label}
+	</label>
+	<div class="col-md-6" >
+		{$approve_user_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="approve_user">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd approve_user}
+		</div>
+	</div>
+</div>
+</div>
+{END approve_user_fieldblock}
+
+			{BEGIN approve_hrd_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_approve_hrd}" data-fieldname="approve_hrd" data-signal-error-for="approve_hrd{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_approve_hrd}">
+		{BEGIN approve_hrd_label}{$label v_approve_lemburhrd approve_hrd}{END approve_hrd_label}
+	</label>
+	<div class="col-md-6" >
+		{$approve_hrd_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="approve_hrd">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd approve_hrd}
+		</div>
+	</div>
+</div>
+</div>
+{END approve_hrd_fieldblock}
+
+			{BEGIN status_hrdapprove_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_status_hrdapprove}" data-fieldname="status_hrdapprove" data-signal-error-for="status_hrdapprove{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_status_hrdapprove}">
+		{BEGIN status_hrdapprove_label}{$label v_approve_lemburhrd status_hrdapprove}{END status_hrdapprove_label}
+	</label>
+	<div class="col-md-6" >
+		{$status_hrdapprove_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="status_hrdapprove">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd status_hrdapprove}
+		</div>
+	</div>
+</div>
+</div>
+{END status_hrdapprove_fieldblock}
+
+			{BEGIN approvedate_hrd_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_approvedate_hrd}" data-fieldname="approvedate_hrd" data-signal-error-for="approvedate_hrd{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_approvedate_hrd}">
+		{BEGIN approvedate_hrd_label}{$label v_approve_lemburhrd approvedate_hrd}{END approvedate_hrd_label}
+	</label>
+	<div class="col-md-6" >
+		{$approvedate_hrd_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="approvedate_hrd">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd approvedate_hrd}
+		</div>
+	</div>
+</div>
+</div>
+{END approvedate_hrd_fieldblock}
+
+			{BEGIN approve_spv_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_approve_spv}" data-fieldname="approve_spv" data-signal-error-for="approve_spv{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_approve_spv}">
+		{BEGIN approve_spv_label}{$label v_approve_lemburhrd approve_spv}{END approve_spv_label}
+	</label>
+	<div class="col-md-6" >
+		{$approve_spv_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="approve_spv">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd approve_spv}
+		</div>
+	</div>
+</div>
+</div>
+{END approve_spv_fieldblock}
+
+			{BEGIN approve_spv_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_approve_spv_date}" data-fieldname="approve_spv_date" data-signal-error-for="approve_spv_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_approve_spv_date}">
+		{BEGIN approve_spv_date_label}{$label v_approve_lemburhrd approve_spv_date}{END approve_spv_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$approve_spv_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="approve_spv_date">
+		<div class="text-muted" >
+		{$tooltip v_approve_lemburhrd approve_spv_date}
+		</div>
+	</div>
+</div>
+</div>
+{END approve_spv_date_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Simpan</button>
+	{END save_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>Balik ke daftar</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>Batal</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>Tata ulang</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>Lihat</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,343 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel t_pelatihan add}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Balik ke daftar</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Lihat</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN entry_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_entry_date}" data-fieldname="entry_date" data-signal-error-for="entry_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_entry_date}">
+		{BEGIN entry_date_label}{$label t_pelatihan entry_date}{END entry_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$entry_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="entry_date">
+		<div class="text-muted" >
+		{$tooltip t_pelatihan entry_date}
+		</div>
+	</div>
+</div>
+</div>
+{END entry_date_fieldblock}
+
+			{BEGIN nama_pegawai_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_nama_pegawai}" data-fieldname="nama_pegawai" data-signal-error-for="nama_pegawai{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_nama_pegawai}">
+		{BEGIN nama_pegawai_label}{$label t_pelatihan nama_pegawai}{END nama_pegawai_label}
+	</label>
+	<div class="col-md-6" >
+		{$nama_pegawai_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="nama_pegawai">
+		<div class="text-muted" >
+		{$tooltip t_pelatihan nama_pegawai}
+		</div>
+	</div>
+</div>
+</div>
+{END nama_pegawai_fieldblock}
+
+			{BEGIN tgl_mulai_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_tgl_mulai}" data-fieldname="tgl_mulai" data-signal-error-for="tgl_mulai{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_tgl_mulai}">
+		{BEGIN tgl_mulai_label}{$label t_pelatihan tgl_mulai}{END tgl_mulai_label}
+	</label>
+	<div class="col-md-6" >
+		{$tgl_mulai_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="tgl_mulai">
+		<div class="text-muted" >
+		{$tooltip t_pelatihan tgl_mulai}
+		</div>
+	</div>
+</div>
+</div>
+{END tgl_mulai_fieldblock}
+
+			{BEGIN tgl_selesai_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_tgl_selesai}" data-fieldname="tgl_selesai" data-signal-error-for="tgl_selesai{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_tgl_selesai}">
+		{BEGIN tgl_selesai_label}{$label t_pelatihan tgl_selesai}{END tgl_selesai_label}
+	</label>
+	<div class="col-md-6" >
+		{$tgl_selesai_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="tgl_selesai">
+		<div class="text-muted" >
+		{$tooltip t_pelatihan tgl_selesai}
+		</div>
+	</div>
+</div>
+</div>
+{END tgl_selesai_fieldblock}
+
+			{BEGIN judul_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_judul}" data-fieldname="judul" data-signal-error-for="judul{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_judul}">
+		{BEGIN judul_label}{$label t_pelatihan judul}{END judul_label}
+	</label>
+	<div class="col-md-6" >
+		{$judul_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="judul">
+		<div class="text-muted" >
+		{$tooltip t_pelatihan judul}
+		</div>
+	</div>
+</div>
+</div>
+{END judul_fieldblock}
+
+			{BEGIN tempat_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_tempat}" data-fieldname="tempat" data-signal-error-for="tempat{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_tempat}">
+		{BEGIN tempat_label}{$label t_pelatihan tempat}{END tempat_label}
+	</label>
+	<div class="col-md-6" >
+		{$tempat_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="tempat">
+		<div class="text-muted" >
+		{$tooltip t_pelatihan tempat}
+		</div>
+	</div>
+</div>
+</div>
+{END tempat_fieldblock}
+
+			{BEGIN penyelenggara_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_penyelenggara}" data-fieldname="penyelenggara" data-signal-error-for="penyelenggara{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_penyelenggara}">
+		{BEGIN penyelenggara_label}{$label t_pelatihan penyelenggara}{END penyelenggara_label}
+	</label>
+	<div class="col-md-6" >
+		{$penyelenggara_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="penyelenggara">
+		<div class="text-muted" >
+		{$tooltip t_pelatihan penyelenggara}
+		</div>
+	</div>
+</div>
+</div>
+{END penyelenggara_fieldblock}
+
+			{BEGIN file_sertifikat_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_file_sertifikat}" data-fieldname="file_sertifikat" data-signal-error-for="file_sertifikat{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_file_sertifikat}">
+		{BEGIN file_sertifikat_label}{$label t_pelatihan file_sertifikat}{END file_sertifikat_label}
+	</label>
+	<div class="col-md-6" >
+		{$file_sertifikat_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="file_sertifikat">
+		<div class="text-muted" >
+		{$tooltip t_pelatihan file_sertifikat}
+		</div>
+	</div>
+</div>
+</div>
+{END file_sertifikat_fieldblock}
+
+			{BEGIN file_materi_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_file_materi}" data-fieldname="file_materi" data-signal-error-for="file_materi{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_file_materi}">
+		{BEGIN file_materi_label}{$label t_pelatihan file_materi}{END file_materi_label}
+	</label>
+	<div class="col-md-6" >
+		{$file_materi_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="file_materi">
+		<div class="text-muted" >
+		{$tooltip t_pelatihan file_materi}
+		</div>
+	</div>
+</div>
+</div>
+{END file_materi_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Simpan</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">Tata ulang</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">Balik ke daftar</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">Batal</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

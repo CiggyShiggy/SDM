@@ -1,0 +1,57 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel t_keluarga masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$entry_date_class}">{$label t_keluarga entry_date}</th>
+			<th class="{$ktp_class}">{$label t_keluarga ktp}</th>
+			<th class="{$kk_class}">{$label t_keluarga kk}</th>
+			<th class="{$akta_class}">{$label t_keluarga akta}</th>
+			<th class="{$id_pegawai_class}">{$label t_keluarga id_pegawai}</th>
+			<th class="{$nama_pegawai_class}">{$label t_keluarga nama_pegawai}</th>
+			<th class="{$hub_kel_class}">{$label t_keluarga hub_kel}</th>
+			<th class="{$nama_kel_class}">{$label t_keluarga nama_kel}</th>
+			<th class="{$tgl_lahir_class}">{$label t_keluarga tgl_lahir}</th>
+			<th class="{$nik_class}">{$label t_keluarga nik}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$entry_date_class}">{$entry_date_mastervalue}</td>
+			<td class="{$ktp_class}">{$ktp_mastervalue}</td>
+			<td class="{$kk_class}">{$kk_mastervalue}</td>
+			<td class="{$akta_class}">{$akta_mastervalue}</td>
+			<td class="{$id_pegawai_class}">{$id_pegawai_mastervalue}</td>
+			<td class="{$nama_pegawai_class}">{$nama_pegawai_mastervalue}</td>
+			<td class="{$hub_kel_class}">{$hub_kel_mastervalue}</td>
+			<td class="{$nama_kel_class}">{$nama_kel_mastervalue}</td>
+			<td class="{$tgl_lahir_class}">{$tgl_lahir_mastervalue}</td>
+			<td class="{$nik_class}">{$nik_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>
