@@ -1,0 +1,4 @@
+Modified tables ("-" means deleted field, "+" means new field):
+	● t_legalitas_perusahaan:
+		 + catatan
+		 + id_dokter
